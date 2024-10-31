@@ -481,6 +481,80 @@ img.header__image-bg {
   color: var(--text-dark);
 }
 
+/* ------------------------------- FAQ ---------------------------------------  */
+.faq_box {
+  padding: 2rem;
+}
+
+.collapsible {
+  cursor: pointer;
+  padding: 2rem;
+  width: 100%;
+  background-color: #fff;
+  color: #333;
+  font-size: 1.1rem;
+  font-weight: 600;
+  border: none;
+  border-bottom: 1px solid #ddd;
+  text-align: left;
+  position: relative;
+  transition: background-color 0.3s ease;
+}
+
+.collapsible:hover {
+  background-color: #f0f0f0;
+}
+
+.collapsible:after {
+  content: "\002B";
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: transform 0.3s ease;
+}
+
+.collapsible.active:after {
+  content: "\2212";
+}
+
+.faqcontent {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.5rem;
+  transition: max-height 0.4s ease-out;
+  background-color: #fff;
+}
+
+.faqcontent p {
+  color: #555;
+  margin: 1rem 0;
+  line-height: 1.6;
+}
+
+.faqcontent a {
+  color: var(--color-principal);
+  text-decoration: underline;
+}
+
+@media screen and (max-width: 768px) {
+  .collapsible:after {
+    right: 5px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .collapsible:after {
+    right: 5px;
+  }
+
+  .faq_box {
+    padding: 0;
+    margin: auto;
+  }
+}
 /* ------------------------------- REDES SOCIALES ---------------------------------------  */
 
 .instagram__container p {
@@ -596,6 +670,8 @@ img.header__image-bg {
   color: var(--text-light);
   text-align: center;
 }
+
+/* ----------------------------- MEDIA QUERIES ----------------------------- */
 
 @media (width > 540px) {
   .header__content h1 {
