@@ -484,20 +484,29 @@ img.header__image-bg {
   transition: 0.3s;
 }
 
-@media (width < 900px) {
-  .testimonials__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-  /* .header h2 {
-    font-size: 1.2rem;
-    margin-top: 1rem;
-  } */
+/* Estilos para dispositivos grandes ya definidos */
+.testimonials__grid {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  padding: 20px;
 }
 
-@media (width < 540px) {
+/* Adaptación para pantallas móviles */
+@media screen and (max-width: 768px) {
   .testimonials__grid {
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr; /* Mostrar una tarjeta por fila */
+    gap: 1.5rem; /* Espacio entre tarjetas */
+    padding: 15px; /* Reducir el padding para dispositivos pequeños */
+  }
+}
+
+/* Estilos adicionales para pantallas muy pequeñas (menores de 480px) */
+@media screen and (max-width: 480px) {
+  .testimonials__grid {
+    padding: 2px;
+    margin-top: 20px;
   }
 }
 
