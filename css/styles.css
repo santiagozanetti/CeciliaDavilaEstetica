@@ -495,7 +495,7 @@ img.header__image-bg {
   } */
 }
 
-@media (width < 600px) {
+@media (width < 540px) {
   .testimonials__grid {
     grid-template-columns: repeat(1, 1fr);
   }
