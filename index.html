@@ -27,7 +27,7 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="#home">Estética Cecilia Dávila</a>
+          <a href="#">Estética Cecilia Dávila</a>
         </div>
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
@@ -45,7 +45,7 @@
       <div class="section__container header__container">
         <div class="header__content">
           <h4>Bienvenidos</h4>
-          <h1>Tratamientos<br /><span>Personalizados</span></h1>
+          <h1>Frase Que<br /><span>Atraiga</span></h1>
           <h2>Subtitulo que atraiga :)</h2>
           <p>
             Desde chequeos de rutina hasta tratamientos especializados, estamos
@@ -344,6 +344,63 @@
       </div>
     </section>
 
+    <!--------------------------------- CONTACTO --------------------------------------------->
+    <section id="contact" class="contact__section">
+      <div class="section__container">
+        <p class="section__subheader">Contacto</p>
+        <h2 class="section__header">¡Hablá con nosotros!</h2>
+
+        <div class="contact__content">
+          <div class="contact__form">
+            <form id="contactForm">
+              <div class="form__group">
+                <label for="name">Nombre</label>
+                <input type="text" id="name" placeholder="Nombre" required />
+              </div>
+              <div class="form__group">
+                <label for="lastname">Apellido</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  placeholder="Apellido"
+                  required
+                />
+              </div>
+              <div class="form__group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Escribí tu mensaje"
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="button"
+                class="submit__btn"
+                onclick="sendWhatsApp()"
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+
+          <!-- Mapa de Google Maps -->
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.341607076717!2d-58.52859082453167!3d-34.46885735038813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1f603c9790b%3A0xc9c1f373f8a51285!2sESTETICA%20CECILIA%20DAVILA!5e0!3m2!1ses-419!2sar!4v1729550842539!5m2!1ses-419!2sar"
+              width="600"
+              height="400"
+              style="border: 0"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!--------------------------------- REDES SOCIALES --------------------------------------------->
 
     <section class="section__container instagram__container">
@@ -359,7 +416,7 @@
 
     <!--------------------------------- PIE DE PAGINA --------------------------------------------->
 
-    <footer id="contact">
+    <footer id="footer">
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">

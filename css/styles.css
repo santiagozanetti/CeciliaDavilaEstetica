@@ -750,14 +750,18 @@ img.header__image-bg {
 
 @media (width > 768px) {
   nav {
-    position: static;
-    padding: 2rem 1rem;
-    max-width: var(--max-width);
+    position: sticky;
+    top: 0; /* Posición en la parte superior */
+    padding: 1.5rem 10rem;
+    /* max-width: var(--max-width); */
     margin-inline: auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
+    background-color: #fff;
+    z-index: 1000;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
   }
 
   .nav__header {
@@ -791,6 +795,15 @@ img.header__image-bg {
     align-items: center;
   }
 
+  .header__bottom {
+    display: none;
+  }
+
+  .header__container {
+    padding-block: 0rem;
+    height: 612px;
+  }
+
   .header__content {
     grid-area: 1/2/2/3;
   }
@@ -810,7 +823,7 @@ img.header__image-bg {
 
   .header__image img {
     max-width: 500px;
-    height: 600px;
+    height: 612px;
   }
 
   .intro__grid {
@@ -842,6 +855,11 @@ img.header__image-bg {
   .footer__container {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .product::before {
+    /* width: 100%; */
+    height: 65%;
+  }
 }
 
 /*----------------------------- SCROLLBAR ---------------------------*/
@@ -866,4 +884,117 @@ img.header__image-bg {
 ::-webkit-scrollbar-thumb:hover {
   background-color: var(--text-light); /* Cambia de color al hacer hover */
   border: 3px solid var(--text-light);
+}
+
+.contact__section {
+  background-color: #f9f9f9;
+  padding: 4rem 1rem;
+}
+
+.contact__header {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contact__header h2 {
+  font-size: 2.5rem;
+  font-weight: 400;
+  color: var(--color-principal);
+}
+
+.contact__header p {
+  font-size: 1.2rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* Contenedor de Contacto */
+.contact__content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+/* Formulario de Contacto */
+.contact__form form {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form__group label {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 0.5rem;
+}
+
+.form__group input,
+.form__group textarea {
+  padding: 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 1rem;
+  background-color: #fff;
+  resize: none;
+}
+
+.form__group input:focus,
+.form__group textarea:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.submit__btn {
+  background-color: var(--primary-color);
+  color: #110d0d;
+  padding: 1rem 2rem;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.submit__btn:hover {
+  background-color: var(--white);
+}
+
+/* Mapa */
+.contact__map {
+  width: 100%;
+  height: 400px;
+}
+
+.contact__map iframe {
+  border-radius: 10px;
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
+  .contact__content {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .contact__header h2 {
+    font-size: 2rem;
+  }
+
+  .contact__header p {
+    font-size: 1rem;
+  }
+
+  .contact__map {
+    height: 250px;
+  }
+
+  .submit__btn {
+    width: 100%;
+    padding: 1rem;
+  }
 }
