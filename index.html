@@ -27,8 +27,15 @@
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
+          <a href="#">
+            <img
+              src="assets/icono-pluma.jpg"
+              alt="Feather Icon"
+              class="logo-icon"
+          /></a>
           <a href="#">Estética Cecilia Dávila</a>
         </div>
+
         <div class="nav__menu__btn" id="menu-btn">
           <i class="ri-menu-line"></i>
         </div>
@@ -41,34 +48,12 @@
         <li><a href="#contact">Contacto</a></li>
       </ul>
     </nav>
-    <header id="home">
+
+    <header class="header" id="home">
       <div class="section__container header__container">
-        <div class="header__content">
-          <h4>Bienvenidos</h4>
-          <h1>Frase Que<br /><span>Atraiga</span></h1>
-          <h2>Subtitulo que atraiga :)</h2>
-          <p>
-            Desde chequeos de rutina hasta tratamientos especializados, estamos
-            aquí para garantizar que tu piel y cuerpo se vean de la mejor
-            manera.
-          </p>
-          <div class="header__btn">
-            <button>
-              Empezá Ahora!
-              <span><i class="ri-arrow-right-line"></i></span>
-            </button>
-          </div>
-        </div>
-        <div class="header__image">
-          <!-- <img
-            src="assets/header.png"
-            alt="header-bg"
-            class="header__image-bg"
-          /> -->
-          <img src="assets/pexels-elly-fairytale-3865523.jpg" alt="header" />
-        </div>
+        <h1>TRAVELLER<br /><span>FOR LIFE.</span></h1>
+        <p>Live your best moments</p>
       </div>
-      <div class="header__bottom"></div>
     </header>
 
     <!--------------------------------- BENEFICIOS --------------------------------------------->
@@ -198,84 +183,63 @@
 
     <!--------------------------------- SERVICIOS O TRATAMIENTOS --------------------------------------------->
 
-    <section class="section__container service__container" id="service">
-      <p class="section__subheader">Servicios</p>
-      <h2 class="section__header">What we can do for you</h2>
-      <div class="service__flex">
-        <div class="service__card">
-          <div>
-            <i class="ri-water-flash-line"></i>
-          </div>
-          <p>Limpieza Facial</p>
-        </div>
-        <div class="service__card">
-          <div>
-            <i class="ri-wifi-line"></i>
-            <!-- Icono de Radiofrecuencia -->
-          </div>
-          <p>Radiofrecuencia</p>
-        </div>
-        <div class="service__card">
-          <div>
-            <i class="ri-leaf-line"></i>
-            <!-- Icono de Drenaje Linfático -->
-          </div>
-          <p>Drenaje Linfático</p>
-        </div>
-        <div class="service__card">
-          <div>
-            <i class="fas fa-sync-alt"></i>
-            <!-- Icono de Peeling -->
-          </div>
-          <p>Peeling</p>
-        </div>
-        <div class="service__card">
-          <div>
-            <i class="fas fa-pen"></i>
-            <!-- Icono de Dermapen -->
-          </div>
-          <p>Dermapen</p>
-        </div>
-      </div>
-    </section>
+    <section class="section__container" id="services">
+      <p class="section__subheader">Nuestros Servicios</p>
+      <h2 class="section__header">Explora Nuestros Tratamientos</h2>
 
-    <!--------------------------------- TESTIMONIOS --------------------------------------------->
-    <section class="section__container">
-      <p class="section__subheader">TESTIMONIOS</p>
-      <h2 class="section__header">Lo que dicen nuestros pacientes</h2>
-
-      <div class="testimonials__grid">
-        <div class="card">
-          <span><i class="ri-double-quotes-l"></i></span>
-          <p>
-            Excelente la cordialidad y el servicio que ofrece, a mi me ayudo
-            muchísimo con el drenaje linfático y sin dejar de lado la limpieza
-            de cutis. Realmente una genia Cecilia
-          </p>
-          <hr />
-
-          <p class="name">Cristina Quiroga</p>
+      <div class="services-categories">
+        <!-- Categoría de Tratamientos Faciales -->
+        <div class="category">
+          <h3 class="category-title">Tratamientos Faciales</h3>
+          <div class="service-item">
+            <h4>Limpieza de Cutis</h4>
+            <p>
+              Elimina impurezas y revitaliza la piel con una limpieza profunda.
+            </p>
+          </div>
+          <div class="service-item">
+            <h4>Peeling Facial</h4>
+            <p>Exfoliación que renueva la piel y mejora su textura.</p>
+          </div>
+          <div class="service-item">
+            <h4>Crio Radiofrecuencia</h4>
+            <p>
+              Tratamiento para combatir la flacidez y estimular el colágeno.
+            </p>
+          </div>
+          <div class="service-item">
+            <h4>Dermapen</h4>
+            <p>Microagujas para mejorar la regeneración y suavizar arrugas.</p>
+          </div>
+          <div class="service-item">
+            <h4>Yoga Facial</h4>
+            <p>Relaja y tonifica los músculos del rostro de forma natural.</p>
+          </div>
         </div>
-        <div class="card">
-          <span><i class="ri-double-quotes-l"></i></span>
-          <p>
-            Excelente todo lo que hace! Yo me hago pelling, radiofrecuencia,
-            dermapen y limpieza profunda de cutis y me deja la piel genial!
-            Además de que te asesora con lo que necesitas, te brinda productos y
-            tiene buenas promociones!! Cecilia es muy cálida en su atención!
-          </p>
-          <hr />
-          <p class="name">María Eugenia Gomes</p>
-        </div>
-        <div class="card">
-          <span><i class="ri-double-quotes-l"></i></span>
-          <p>
-            Muy buenos los tratamientos y la atención es súper cálida Vale la
-            pena a mi me dió muy buenos resultados Calidad precio es muy
-            adecuada
-          </p>
-          <hr />
-          <p class="name">Laura Pollitzer de Cassese</p>
+
+        <!-- Categoría de Tratamientos Corporales -->
+        <div class="category">
+          <h3 class="category-title">Tratamientos Corporales</h3>
+          <div class="service-item">
+            <h4>Himfu</h4>
+            <p>Reducción de grasa localizada con tecnología de ultrasonido.</p>
+          </div>
+          <div class="service-item">
+            <h4>Criofrecuencia</h4>
+            <p>Combina frío y radiofrecuencia para tonificar y reducir.</p>
+          </div>
+          <div class="service-item">
+            <h4>Body Up</h4>
+            <p>Electroestimulación para tonificar y fortalecer el cuerpo.</p>
+          </div>
+          <div class="service-item">
+            <h4>Ultracavitación</h4>
+            <p>Elimina grasa mediante cavitación sin cirugía.</p>
+          </div>
+          <div class="service-item">
+            <h4>Masajes Reductores</h4>
+            <p>Masajes enfocados en reducir medidas y mejorar la silueta.</p>
+          </div>
         </div>
       </div>
     </section>
@@ -341,6 +305,88 @@
             </p>
           </div>
         </div>
+      </div>
+    </section>
+
+    <!--------------------------------- TESTIMONIOS --------------------------------------------->
+    <section class="section__container client__container">
+      <p class="section__subheader">¿Que dicen nuestros pacientes?</p>
+      <h2 class="section__header"><span>Testimonios</span></h2>
+      <div class="client__card active">
+        <img src="assets/instagram-1.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Cristina Quiroga</h4>
+          <h5>Paciente</h5>
+          <p>
+            Excelente la cordialidad y el servicio que ofrece, a mi me ayudo
+            muchísimo con el drenaje linfático y sin dejar de lado la limpieza
+            de cutis. Realmente una genia Cecilia
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/instagram-2.jpg" alt="client" />
+        <div class="client__content">
+          <h4>María Eugenia Gomes</h4>
+          <h5>Paciente</h5>
+          <p>
+            Excelente todo lo que hace! Yo me hago pelling, radiofrecuencia,
+            dermapen y limpieza profunda de cutis y me deja la piel genial!
+            Además de que te asesora con lo que necesitas, te brinda productos y
+            tiene buenas promociones!! Cecilia es muy cálida en su atención!
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/instagram-3.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Laura Pollitzer de Cassese</h4>
+          <h5>Paciente</h5>
+          <p>
+            Muy buenos los tratamientos y la atención es súper cálida Vale la
+            pena a mi me dió muy buenos resultados Calidad precio es muy
+            adecuada
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/instagram-3.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Natalia Iwasetschko</h4>
+          <h5>Paciente</h5>
+          <p>
+            Cecilia es una excelente profesional. Realiza tratamientos faciales
+            y corporales a medida, intercalando masajes manuales y aparatlogía
+            para conseguir resultados increíbles.
+          </p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/instagram-3.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Maria Oliva Vélez Herbin</h4>
+          <h5>Paciente</h5>
+          <p>Excelente y cálida atención! Muy buenos precios y promos</p>
+        </div>
+      </div>
+      <div class="client__card">
+        <img src="assets/instagram-3.jpg" alt="client" />
+        <div class="client__content">
+          <h4>Paula Matarazzo</h4>
+          <h5>Paciente</h5>
+          <p>
+            Graaaaaacias por los tratamientos q me hiciste...y el peeling muuuy
+            bueno!!!!
+          </p>
+        </div>
+      </div>
+      <div class="client__btns">
+        <button class="btn" id="prev">
+          <i class="ri-arrow-left-line"></i>
+        </button>
+        <button class="btn" id="next">
+          <i class="ri-arrow-right-line"></i>
+        </button>
       </div>
     </section>
 

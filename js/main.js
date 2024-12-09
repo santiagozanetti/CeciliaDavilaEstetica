@@ -20,24 +20,16 @@ const scrollRevealOption = {
   duration: 1000,
 };
 
-ScrollReveal().reveal(".header__content h4", {
+ScrollReveal().reveal(".header__container h1", {
   ...scrollRevealOption,
 });
-ScrollReveal().reveal(".header__content h1", {
+ScrollReveal().reveal(".header__container p", {
   ...scrollRevealOption,
   delay: 500,
 });
-ScrollReveal().reveal(".header__content h2", {
+ScrollReveal().reveal(".header__container form", {
   ...scrollRevealOption,
   delay: 1000,
-});
-ScrollReveal().reveal(".header__content p", {
-  ...scrollRevealOption,
-  delay: 1500,
-});
-ScrollReveal().reveal(".header__btn", {
-  ...scrollRevealOption,
-  delay: 2000,
 });
 
 ScrollReveal().reveal(".intro__card", {
@@ -90,7 +82,6 @@ ScrollReveal().reveal(".instagram__grid img", {
   interval: 500,
 });
 
-
 // FAQ -------
 
 var collapsibles = document.querySelectorAll(".collapsible");
@@ -107,3 +98,33 @@ collapsibles.forEach((button) => {
     }
   });
 });
+
+// testimonios
+
+const next = document.getElementById("next");
+const prev = document.getElementById("prev");
+const clientCards = Array.from(document.querySelectorAll(".client__card"));
+
+next.addEventListener("click", (e) => {
+  for (let index = 0; index < clientCards.length; index++) {
+    if (clientCards[index].classList.contains("active")) {
+      const nextIndex = (index + 1) % clientCards.length;
+      clientCards[index].classList.remove("active");
+      clientCards[nextIndex].classList.add("active");
+      break;
+    }
+  }
+});
+
+prev.addEventListener("click", (e) => {
+  for (let index = 0; index < clientCards.length; index++) {
+    if (clientCards[index].classList.contains("active")) {
+      const prevIndex = (index ? index : clientCards.length) - 1;
+      clientCards[index].classList.remove("active");
+      clientCards[prevIndex].classList.add("active");
+      break;
+    }
+  }
+});
+
+// home
