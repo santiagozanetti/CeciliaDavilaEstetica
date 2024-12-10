@@ -164,58 +164,47 @@ nav {
 
 /* ------------------------------- BENEFICIOS ---------------------------------------  */
 
-.intro__grid {
-  margin-top: 4rem;
+.benefits-grid {
   display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 2rem;
+  margin-top: 2rem;
 }
 
-.intro__card {
+.benefit-card {
   text-align: center;
-}
-
-.intro__card div {
-  max-width: fit-content;
-  margin-inline: auto;
-  margin-bottom: 1rem;
+  background: #f9f9f9;
   padding: 2rem;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-size: contain;
+  border-radius: 12px;
+  /* box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); */
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
-.intro__card div img {
-  width: unset;
-  height: 175px;
-  border-radius: 5px;
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.intro__card h4 {
-  margin-bottom: 0.5rem;
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: var(--text-dark);
-}
-
-.intro__card p {
-  margin-bottom: 2rem;
-  color: var(--text-light);
-}
-
-.intro__card a {
+.benefit-icon {
+  font-size: 3.5rem;
+  color: #cab0bc;
+  background: #f2e8ec;
+  border-radius: 50%;
+  padding: 1rem;
+  margin-bottom: 1rem;
   display: inline-block;
-  padding: 0.5rem 2rem;
-  /* border: 2px solid; */
-  border-radius: 5rem;
-  transition: 0.3s;
-  background-color: var(--secondary-color);
-  color: var(--white);
-  transition: 0.3s ease;
 }
 
-.intro__card a:hover {
-  background-color: var(--primary-color);
-  color: var(--white);
+.benefit-card h3 {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #3f3b57; /* Más oscuro para contraste */
+  margin-bottom: 0.5rem;
+}
+
+.benefit-card p {
+  font-size: 1rem;
+  color: var(--text-light);
 }
 
 /* ------------------------------- SOBRE NOSOTROS ---------------------------------------  */
@@ -414,12 +403,15 @@ nav {
   .service-image {
     max-width: 100%;
   }
+  .service-content {
+    text-align: center;
+  }
 }
 
-/* Estilos generales */
+/* ------------------------------ PAGINA FACIALES y CORPORALES ------------------------------------*/
 .treatment-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
   gap: 2rem;
   align-items: center;
   margin-top: 2rem;
@@ -427,17 +419,16 @@ nav {
 
 .treatment-item {
   display: flex;
-  gap: 1.5rem;
+  gap: 2rem;
   align-items: center;
   background-color: #f9f9f9;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
+  padding: 2rem;
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
 }
 
 .treatment-item:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -447,10 +438,12 @@ nav {
   border-radius: 50%;
   object-fit: cover;
   border: 3px solid var(--primary-color);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease-in-out;
 }
 
 .treatment-info h3 {
-  font-size: 1.5rem;
+  font-size: 1.8rem;
   font-weight: 600;
   color: var(--text-dark);
 }
@@ -461,10 +454,22 @@ nav {
   margin: 0.5rem 0;
 }
 
-.price {
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: var(--primary-color);
+.treatment-info .price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--secondary-color);
+  text-align: right;
+}
+
+@media screen and (max-width: 768px) {
+  .treatment-item {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .treatment-image {
+    margin-bottom: 1rem;
+  }
 }
 
 /* ------------------------------- TESTIMONIOS ---------------------------------------  */
@@ -667,11 +672,13 @@ nav {
 .footer__container {
   display: grid;
   gap: 4rem 2rem;
+  border-top: 2px solid var(--primary-color);
+  text-align: center;
 }
 
 .footer__logo a {
   font-size: 1.75rem;
-  font-weight: 700;
+  font-weight: 500;
   color: var(--text-dark);
 }
 
@@ -730,17 +737,17 @@ nav {
   cursor: pointer;
 }
 
-.footer__socials {
+.footer__socials i {
   display: flex;
   align-items: center;
-  flex-wrap: wrap;
+  flex-wrap: n;
   gap: 0.5rem;
 }
 
 .footer__socials a {
   display: inline-block;
   padding: 5px 8px;
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--text-dark);
   background-color: var(--primary-color);
   border-radius: 100%;
