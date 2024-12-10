@@ -462,50 +462,35 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .section__container {
-    padding: 20px; /* Ajusta el espaciado general */
-  }
-
   .treatment-grid {
-    display: flex;
-    flex-direction: column;
-    gap: 20px; /* Espaciado entre items */
+    grid-template-columns: 1fr; /* Cambia a una columna */
   }
 
   .treatment-item {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column; /* Cambia a diseño en columna */
     align-items: center;
     text-align: center;
+    padding: 1.5rem; /* Ajusta el espaciado */
   }
 
   .treatment-image {
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 15px; /* Espaciado entre imagen y texto */
-  }
-
-  .treatment-info {
-    max-width: 100%;
-    padding: 0 10px;
+    width: 100px; /* Reduce el tamaño de la imagen */
+    height: 100px;
+    margin-bottom: 1rem; /* Agrega espaciado inferior */
   }
 
   .treatment-info h3 {
-    font-size: 1.5rem; /* Ajusta el tamaño de los títulos */
+    font-size: 1.5rem; /* Reduce ligeramente el tamaño del texto */
   }
 
   .treatment-info p {
-    font-size: 1rem; /* Ajusta el tamaño de los textos */
-    margin-bottom: 10px;
+    font-size: 0.9rem; /* Ajusta tamaño del texto */
   }
 
-  .price {
-    font-size: 1.2rem;
-    font-weight: bold;
-    color: #0078d7; /* Puedes personalizar el color */
+  .treatment-info .price {
+    font-size: 1.1rem; /* Ajusta tamaño del precio */
   }
 }
-
 /* ------------------------------- TESTIMONIOS ---------------------------------------  */
 .testimonials__grid {
   width: 100%;
