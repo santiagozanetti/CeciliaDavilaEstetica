@@ -93,11 +93,13 @@ ScrollReveal().reveal(".service__card", {
   interval: 500,
 });
 
-const swiper = new Swiper(".swiper", {
-  slidesPerView: 3,
-  spaceBetween: 20,
-  loop: true,
-});
+if (document.querySelector(".swiper")) {
+  const swiper = new Swiper(".swiper", {
+    slidesPerView: 3,
+    spaceBetween: 20,
+    loop: true,
+  });
+}
 
 ScrollReveal().reveal(".instagram__grid img", {
   duration: 1000,
@@ -198,8 +200,7 @@ function sendWhatsApp() {
   });
 
   // Verificar si el dispositivo es móvil
-  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
-
+  const isMobile = navigator.userAgent.includes("Mobi");
   // Redirigir o abrir en nueva ventana dependiendo del dispositivo
   setTimeout(() => {
     if (isMobile) {
