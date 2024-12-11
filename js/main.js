@@ -156,14 +156,23 @@ function sendWhatsApp() {
     icon: "success",
     title: "¡Mensaje listo!",
     text: "Serás redirigido a WhatsApp en breve.",
-    timer: 3000, // Tiempo de la alerta en milisegundos (3 segundos)
+    timer: 2000, // Tiempo de la alerta en milisegundos (3 segundos)
     timerProgressBar: true, // Barra de progreso
     showConfirmButton: false, // No mostrar botón de confirmación
     allowOutsideClick: false,
   });
 
-  // Redirigir después de que la alerta se cierre automáticamente
+  // Verificar si el dispositivo es móvil
+  const isMobile = /Mobi|Android/i.test(navigator.userAgent);
+
+  // Redirigir o abrir en nueva ventana dependiendo del dispositivo
   setTimeout(() => {
-    window.location.href = whatsappUrl; // Redirige directamente a WhatsApp
-  }, 3000); // El tiempo debe coincidir con el de la alerta (3 segundos)
+    if (isMobile) {
+      // En móviles, redirigimos directamente
+      window.location.href = whatsappUrl;
+    } else {
+      // En computadoras, abrimos en una nueva ventana
+      window.open(whatsappUrl, "_blank");
+    }
+  }, 2000); // El tiempo debe coincidir con el de la alerta (3 segundos)
 }
