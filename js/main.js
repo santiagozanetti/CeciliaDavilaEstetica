@@ -145,7 +145,7 @@ function sendWhatsApp() {
   }
 
   // Configurar el mensaje de WhatsApp
-  const whatsappNumber = "5491150377127"; 
+  const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
     whatsappMessage
@@ -156,13 +156,12 @@ function sendWhatsApp() {
     icon: "success",
     title: "¡Mensaje listo!",
     text: "Serás redirigido a WhatsApp en breve.",
-    timer: 3000, 
+    timer: 3000,
     timerProgressBar: true, //  barra de progreso
     showConfirmButton: false, // No mostrar botón
-    allowOutsideClick: false, 
+    allowOutsideClick: false,
   });
 
-  
   setTimeout(() => {
     window.open(whatsappUrl, "_blank");
   }, 3000);
