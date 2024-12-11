@@ -32,6 +32,23 @@ ScrollReveal().reveal(".header__container form", {
   delay: 1000,
 });
 
+// beneficios
+ScrollReveal().reveal("#benefits h2", {
+  ...scrollRevealOption,
+});
+ScrollReveal().reveal(".benefits-grid", {
+  ...scrollRevealOption,
+  delay: 500,
+});
+ScrollReveal().reveal(".benefits-grid h3", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+ScrollReveal().reveal(".benefits-grid p", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
 ScrollReveal().reveal(".intro__card", {
   ...scrollRevealOption,
   interval: 500,
@@ -58,7 +75,7 @@ ScrollReveal().reveal(".about__content h4", {
 });
 ScrollReveal().reveal(".about__content p", {
   ...scrollRevealOption,
-  delay: 1500,
+  delay: 1200,
 });
 
 ScrollReveal().reveal(".product__card", {
@@ -82,8 +99,22 @@ ScrollReveal().reveal(".instagram__grid img", {
   interval: 500,
 });
 
-// FAQ -------
+ScrollReveal().reveal(".section__container h2", {
+  ...scrollRevealOption,
+  delay: 500,
+});
 
+ScrollReveal().reveal(".service-item ", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
+ScrollReveal().reveal(".service-content", {
+  ...scrollRevealOption,
+  delay: 1500,
+});
+
+// FAQ ------------------------------------------------------
 var collapsibles = document.querySelectorAll(".collapsible");
 
 collapsibles.forEach((button) => {
@@ -127,8 +158,7 @@ prev.addEventListener("click", (e) => {
   }
 });
 
-// wpp
-
+// formulario de contacto
 function sendWhatsApp() {
   const name = document.getElementById("name").value.trim();
   const lastname = document.getElementById("lastname").value.trim();
@@ -144,7 +174,7 @@ function sendWhatsApp() {
     return;
   }
 
-  // Configurar el mensaje de WhatsApp
+  // Configurar el mensaje 
   const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -156,7 +186,7 @@ function sendWhatsApp() {
     icon: "success",
     title: "¡Mensaje listo!",
     text: "Serás redirigido a WhatsApp en breve.",
-    timer: 2000, // Tiempo de la alerta en milisegundos (3 segundos)
+    timer: 2000, // Tiempo de la alerta 
     timerProgressBar: true, // Barra de progreso
     showConfirmButton: false, // No mostrar botón de confirmación
     allowOutsideClick: false,
@@ -174,5 +204,5 @@ function sendWhatsApp() {
       // En computadoras, abrimos en una nueva ventana
       window.open(whatsappUrl, "_blank");
     }
-  }, 2000); // El tiempo debe coincidir con el de la alerta (3 segundos)
+  }, 2000); 
 }
