@@ -32,6 +32,11 @@ ScrollReveal().reveal(".header__container form", {
   delay: 1000,
 });
 
+ScrollReveal().reveal(".treatment-grid", {
+  ...scrollRevealOption,
+  delay: 1000,
+});
+
 // beneficios
 ScrollReveal().reveal("#benefits h2", {
   ...scrollRevealOption,
@@ -174,7 +179,7 @@ function sendWhatsApp() {
     return;
   }
 
-  // Configurar el mensaje 
+  // Configurar el mensaje
   const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
   const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
@@ -186,7 +191,7 @@ function sendWhatsApp() {
     icon: "success",
     title: "¡Mensaje listo!",
     text: "Serás redirigido a WhatsApp en breve.",
-    timer: 2000, // Tiempo de la alerta 
+    timer: 2000, // Tiempo de la alerta
     timerProgressBar: true, // Barra de progreso
     showConfirmButton: false, // No mostrar botón de confirmación
     allowOutsideClick: false,
@@ -204,5 +209,23 @@ function sendWhatsApp() {
       // En computadoras, abrimos en una nueva ventana
       window.open(whatsappUrl, "_blank");
     }
-  }, 2000); 
+  }, 2000);
 }
+
+// Boton flotante
+window.addEventListener("scroll", function () {
+  var btnScrollTop = document.getElementById("btnScrollTop");
+  if (
+    document.body.scrollTop > 20 ||
+    document.documentElement.scrollTop > 1200
+  ) {
+    btnScrollTop.style.display = "block";
+  } else {
+    btnScrollTop.style.display = "none";
+  }
+});
+
+document.getElementById("btnScrollTop").addEventListener("click", function () {
+  document.body.scrollTop = 0;
+  document.documentElement.scrollTop = 0;
+});

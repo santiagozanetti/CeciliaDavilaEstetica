@@ -682,18 +682,27 @@ nav {
 
 .footer__socials {
   display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  gap: 0.5rem;
+  justify-content: center;
+  gap: 1rem;
 }
 
 .footer__socials a {
-  display: inline-block;
-  padding: 5px 8px;
-  font-size: 1.25rem;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 45px;
+  height: 45px;
+  font-size: 1.8rem;
   color: var(--text-dark);
   background-color: var(--primary-color);
-  border-radius: 100%;
+  border-radius: 50%;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.footer__socials a:hover {
+  background-color: var(--secondary-color);
+  color: var(--white);
+  transform: scale(1.1); /* Animación de escalado */
 }
 
 .footer__bar {
@@ -1057,4 +1066,75 @@ textarea {
   }
 }
 
-/* ---------------------------------------------------------------------------------- */
+/* -------------------- botones flotantes ----------------------*/
+
+.btn-wsp {
+  position: fixed;
+  width: 55px;
+  height: 55px;
+  line-height: 55px;
+  bottom: 30px;
+  right: 30px;
+  background-color: #0df053;
+  color: #fff;
+  border-radius: 50%;
+  text-align: center;
+  font-size: 35px;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+.btn-wsp:hover {
+  text-decoration: none;
+  color: #fff;
+  background-color: #0b9b42;
+  transition: 0.3s ease-in-out;
+}
+
+.btn-scroll-top {
+  position: fixed;
+  bottom: 100px;
+  right: 42px;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  background-color: var(--white);
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  color: var(--primary-color);
+}
+
+.btn-scroll-top:hover {
+  background-color: var(--primary-color);
+  transition: 0.3s ease-in-out;
+  text-decoration: none;
+  color: var(--white);
+}
+
+.btn-scroll-top i {
+  font-size: 16px;
+  margin-top: 7px;
+}
+
+@media (max-width: 768px) {
+  .btn-wsp {
+    right: 10px;
+    bottom: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .btn-scroll-top {
+    width: 30px;
+    height: 30px;
+    bottom: 85px;
+    right: 22px;
+  }
+
+  .btn-scroll-top i {
+    font-size: 16px;
+  }
+}
