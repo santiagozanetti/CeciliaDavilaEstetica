@@ -127,4 +127,43 @@ prev.addEventListener("click", (e) => {
   }
 });
 
-// home
+// wpp
+
+function sendWhatsApp() {
+  const name = document.getElementById("name").value.trim();
+  const lastname = document.getElementById("lastname").value.trim();
+  const message = document.getElementById("message").value.trim();
+
+  // Verificar si los campos están vacíos
+  if (name === "" || lastname === "" || message === "") {
+    Swal.fire({
+      icon: "warning",
+      title: "¡Faltan datos!",
+      text: "Por favor, completá todos los campos antes de enviar el mensaje.",
+    });
+    return;
+  }
+
+  // Configurar el mensaje de WhatsApp
+  const whatsappNumber = "5491150377127"; 
+  const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
+
+  // Mostrar alerta de éxito
+  Swal.fire({
+    icon: "success",
+    title: "¡Mensaje listo!",
+    text: "Serás redirigido a WhatsApp en breve.",
+    timer: 3000, 
+    timerProgressBar: true, //  barra de progreso
+    showConfirmButton: false, // No mostrar botón
+    allowOutsideClick: false, 
+  });
+
+  
+  setTimeout(() => {
+    window.open(whatsappUrl, "_blank");
+  }, 3000);
+}

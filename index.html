@@ -27,6 +27,12 @@
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
     <link rel="icon" href="./assets/icono-pluma.jpg" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
+
     <title>Estética Cecilia Dávila | Salón de belleza en San Isidro</title>
   </head>
   <body>
@@ -105,9 +111,7 @@
 
     <section class="section__container about__container" id="about">
       <p class="section__subheader">¿Por Qué Elegirnos?</p>
-      <h2 class="section__header">
-        Descubrí cómo transformamos la belleza en confianza
-      </h2>
+      <h2 class="section__header">Transformamos la belleza en confianza</h2>
       <div class="about__row">
         <div class="about__image">
           <img src="assets/header.png" alt="about" />
@@ -393,22 +397,28 @@
     <!--------------------------------- CONTACTO --------------------------------------------->
     <section id="contact" class="contact__section">
       <div class="section__container">
-        <p class="section__subheader">Contacto</p>
-        <h2 class="section__header">¡Hablá con nosotros!</h2>
+        <p class="section__subheader">¿Tenés dudas?</p>
+        <h2 class="section__header">¡Hablemos!</h2>
 
         <div class="contact__content">
+          <!-- Formulario de Contacto -->
           <div class="contact__form">
             <form id="contactForm">
               <div class="form__group">
                 <label for="name">Nombre</label>
-                <input type="text" id="name" placeholder="Nombre" required />
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Escribí tu nombre"
+                  required
+                />
               </div>
               <div class="form__group">
                 <label for="lastname">Apellido</label>
                 <input
                   type="text"
                   id="lastname"
-                  placeholder="Apellido"
+                  placeholder="Escribí tu apellido"
                   required
                 />
               </div>
@@ -419,6 +429,7 @@
                   rows="4"
                   placeholder="Escribí tu mensaje"
                   required
+                  style="resize: none"
                 ></textarea>
               </div>
               <button
@@ -435,12 +446,8 @@
           <div class="contact__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.341607076717!2d-58.52859082453167!3d-34.46885735038813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1f603c9790b%3A0xc9c1f373f8a51285!2sESTETICA%20CECILIA%20DAVILA!5e0!3m2!1ses-419!2sar!4v1729550842539!5m2!1ses-419!2sar"
-              width="600"
-              height="400"
-              style="border: 0"
               allowfullscreen=""
               loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
             ></iframe>
           </div>
         </div>
@@ -522,5 +529,6 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </body>
 </html>
