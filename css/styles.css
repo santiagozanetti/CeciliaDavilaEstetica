@@ -1,8 +1,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
 :root {
-  --primary-color: #e4c087;
-  --secondary-color: #e4a189;
+  --primary-color: #c6a57a;
+  --secondary-color: #ecbc94;
   --text-dark: #3f3b57;
   --text-light: #908ca3;
   --white: #ffffff;
@@ -112,6 +112,25 @@ nav {
 .nav__links a {
   font-weight: 500;
   color: var(--text-dark);
+  position: relative; 
+  text-decoration: none; 
+  padding: 0.5rem 0; 
+  transition: color 0.3s; 
+}
+
+.nav__links a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0; 
+  height: 3px;
+  background-color: var(--primary-color);
+  transition: width 0.3s; 
+}
+
+.nav__links a:hover::after {
+  width: 102%; 
 }
 
 .nav__links a:hover {
@@ -132,7 +151,7 @@ nav {
 /* ------------------------------- INICIO ---------------------------------------  */
 
 .header {
-  padding-block: 5rem;
+  padding-block: 0rem;
   background-image: linear-gradient(
       to right,
       rgba(0, 0, 0, 0.5),
@@ -142,28 +161,80 @@ nav {
   background-position: center center;
   background-size: cover;
   background-repeat: no-repeat;
+  position: relative;
 }
 
 .header__container h1 {
   margin-bottom: 1rem;
-  font-size: 4rem;
-  font-weight: 600;
+  font-size: 5rem; /* Aumentar el tamaño de la fuente */
+  font-weight: 400; /* Peso más pesado para mayor énfasis */
   color: var(--primary-color);
-  line-height: 5rem;
+  line-height: 6rem; /* Aumentar el interlineado */
   text-align: left;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
 }
 
 .header__container h1 span {
-  font-size: 5.5rem;
-  text-align: left;
+  font-size: 5rem; /* Mantener el tamaño */
+  font-weight: 400; /* Peso más pesado para el span */
 }
 
 .header__container p {
-  margin-bottom: 5rem;
-  font-size: 2rem;
+  margin-bottom: 0rem;
+  font-size: 1.8rem;
   font-family: var(--header-font);
   color: var(--white);
   text-align: left;
+}
+
+.header__container {
+  display: flex; /* Usar flexbox para alinear elementos */
+  flex-direction: column; /* Colocar elementos en columna */
+  align-items: flex-start; /* Alinear a la izquierda */
+}
+
+.header-button {
+  display: inline-block;
+  padding: 15px 30px;
+  background-color: var(--primary-color);
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+  margin-top: 2rem; /* Margen superior para alinear con el texto */
+}
+
+.header-button:hover {
+  background-color: #c0392b;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+@media (max-width: 768px) {
+  .header__container {
+    display: flex;
+    flex-direction: column; /* Colocar elementos en columna */
+    align-items: center; /* Centrar elementos */
+    text-align: center; /* Centrar texto */
+  }
+
+  .header__container h1 {
+    margin-top: 3rem; /* Ajusta el margen superior según sea necesario */
+    margin-bottom: 1rem; /* Mantener margen inferior para separación con el párrafo */
+    font-size: 3.5rem; /* Tamaño de fuente para móviles */
+    line-height: 4rem; /* Ajustar interlineado */
+  }
+
+  .header__container p {
+    font-size: 1.2rem; /* Reducir tamaño de fuente del párrafo */
+    margin-bottom: 2rem; /* Ajustar margen inferior */
+  }
+
+  .header-button {
+    padding: 10px 20px; /* Ajustar padding del botón */
+    font-size: 1rem; /* Ajustar tamaño de fuente del botón */
+    margin-top: 1.5rem; /* Ajustar margen superior */
+  }
 }
 
 /* ------------------------------- BENEFICIOS ---------------------------------------  */
@@ -232,24 +303,24 @@ nav {
   border-radius: 12px;
 }
 
-.cta-text {
+.benefit-text {
   font-size: 1.2rem;
   color: var(--white);
   margin-bottom: 1rem;
 }
 
-.cta-button {
+.benefit-button {
   display: inline-block;
   padding: 1rem 2rem;
   font-size: 1rem;
   color: var(--white);
   background-color: transparent;
-  border: 1px solid white;
+  border: 2px solid white;
   border-radius: 8px;
   transition: background-color 0.3s;
 }
 
-.cta-button:hover {
+.benefit-button:hover {
   background-color: var(--white);
   color: var(--primary-color);
 }
@@ -547,179 +618,163 @@ nav {
 }
 
 /* ------------------------------ PAGINA FACIALES y CORPORALES ------------------------------------*/
+
 .treatment-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
   gap: 2rem;
-  align-items: center;
-  margin-top: 2rem;
 }
 
 .treatment-item {
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  background-color: #f9f9f9;
+  background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  padding: 2rem;
-  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-}
-
-.treatment-item:hover {
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
+  width: 360px; /* Ancho fijo para las tarjetas */
+  margin-top: 3rem;
 }
 
 .treatment-image {
-  width: 120px;
-  height: 120px;
-  border-radius: 50%;
-  object-fit: cover;
-  border: 3px solid var(--primary-color);
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease-in-out;
+  width: 100%;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+
+.treatment-info {
+  text-align: center;
+  padding: 1rem;
 }
 
 .treatment-info h3 {
-  font-size: 1.8rem;
-  font-weight: 600;
-  color: var(--text-dark);
+  font-size: 1.5rem; /* Tamaño del nombre del tratamiento */
+  color: var(--text-dark); /* Color del texto */
+  margin: 1rem 0; /* Margen superior e inferior */
+  font-weight: 500;
 }
 
 .treatment-info p {
-  font-size: 1rem;
+  color: #555; /* Color del texto de la descripción */
+}
+
+.price {
+  font-size: 1.2rem; /* Tamaño del precio */
+  font-weight: bold; /* Negrita para el precio */
+  color: var(--primary-color); /* Color del precio */
+  margin: 0.5rem 0; /* Margen superior e inferior */
+}
+
+/* Estilos de Botones */
+.cta-button {
+  padding: 1rem 2rem; /* Espaciado interno */
+  background-color: var(--primary-color); /* Color de fondo */
+  color: #ffffff; /* Color del texto */
+  border: none; /* Sin borde */
+  border-radius: 5px; /* Bordes redondeados */
+  cursor: pointer; /* Cambiar cursor al pasar */
+  text-align: center; /* Centrar texto */
+  text-decoration: none; /* Sin subrayado */
+  transition: background-color 0.3s; /* Transición suave */
+  margin-top: 1.5rem;
+}
+
+.cta-button:hover {
+  background-color: var(
+    --secondary-color
+  ); /* Cambiar color al pasar el mouse */
+}
+
+/* Estilos de la Sección de Llamado a la Acción */
+.cta-section {
+  text-align: center; /* Centrar texto */
+  margin: 10rem 0; /* Margen superior e inferior */
   color: var(--text-light);
-  margin: 0.5rem 0;
 }
 
-.treatment-info .price {
-  font-size: 1.3rem;
-  font-weight: 600;
-  color: var(--secondary-color);
-  text-align: right;
+.cta-section h2 {
+  font-size: 2rem; /* Tamaño del encabezado */
+  margin-bottom: 1rem; /* Margen inferior */
+  color: var(--primary-color);
 }
 
-@media screen and (max-width: 768px) {
+.cta-section p {
+  font-size: 1.2rem; /* Tamaño del párrafo */
+  margin-bottom: 1rem; /* Margen inferior */
+}
+
+/* Responsividad */
+@media (max-width: 900px) {
   .treatment-grid {
-    grid-template-columns: 1fr;
+    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+    align-items: center; /* Centrar elementos */
   }
 
   .treatment-item {
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
-    padding: 1.5rem;
-  }
-
-  .treatment-image {
-    width: 100px;
-    height: 100px;
-    margin-bottom: 1rem;
-  }
-
-  .treatment-info h3 {
-    font-size: 1.5rem;
-  }
-  .treatment-info p {
-    font-size: 0.9rem;
-  }
-
-  .treatment-info .price {
-    font-size: 1.1rem;
+    width: 90%; /* Ajustar ancho en pantallas pequeñas */
   }
 }
 
 /* ------------------------------- FAQ ---------------------------------------  */
 .faq_box {
+  background-color: #f9f9f9;
+  border-radius: 8px;
   padding: 2rem;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   max-width: 900px;
   margin: 0 auto;
+  text-align: center;
 }
-
-/* @media screen and (min-width: 1024px) {
-  .faq_box {
-    max-width: 900px;
-    margin: 0 auto;
-  }
-} */
-
 .collapsible {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
-  padding: 2rem;
+  padding: 1rem;
   width: 100%;
-  background-color: #fff;
-  color: #333;
-  font-size: 1.1rem;
-  font-weight: 600;
+  background-color: #ffffff;
+  color: var(--text-dark);
+  font-size: 1.2rem;
+  font-weight: 500;
   border: none;
-  border-bottom: 2px solid var(--primary-color);
-  text-align: left;
-  position: relative;
+  border-radius: 5px;
+  margin-bottom: 1rem;
   transition: background-color 0.3s ease;
 }
-
 .collapsible:hover {
   background-color: #f0f0f0;
 }
-
-.collapsible:after {
-  content: "\002B";
+.icon {
   font-size: 1.5rem;
-  color: var(--text-dark);
-  position: absolute;
-  right: 20px;
-  top: 50%;
-  transform: translateY(-50%);
-  transition: transform 0.3s ease;
+  margin-left: 10px;
+  transition: transform 0.3s ease, color 0.3s ease;
 }
-
-.collapsible.active:after {
-  content: "\2212";
-}
-
 .faqcontent {
   max-height: 0;
   overflow: hidden;
-  padding: 0 1.5rem;
-  transition: max-height 0.4s ease-out;
-  background-color: #fff;
-}
+  padding: 0 1rem;
+  margin-bottom: 1rem;
+  background-color: #ffffff;
+  border-radius: 5px;
 
+  transition: max-height 0.3s ease;
+  text-align: center;
+}
 .faqcontent p {
+  font-size: 1.1rem;
   color: #555;
-  margin: 1rem 0;
   line-height: 1.6;
 }
-
-.faqcontent a {
-  color: var(--color-principal);
-  text-decoration: underline;
+.collapsible.active {
+  background-color: #e0e0e0;
+  color: #333;
+}
+.collapsible.active .icon {
+  transform: rotate(180deg);
 }
 
 @media screen and (max-width: 768px) {
-  .collapsible:after {
-    right: 5px;
-  }
-
-  .collapsible {
+  .faqcontent {
     text-align: center;
   }
-}
-
-@media screen and (max-width: 480px) {
-  .collapsible:after {
-    right: 5px;
-  }
-
-  .faq_box {
-    padding: 0;
-    margin: auto;
-  }
-}
-
-.header {
-  margin-bottom: 2rem;
-  text-align: center;
 }
 
 /* ------------------------------- REDES SOCIALES ---------------------------------------  */

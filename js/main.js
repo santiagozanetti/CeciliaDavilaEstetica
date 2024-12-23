@@ -122,18 +122,30 @@ ScrollReveal().reveal(".service-content", {
 });
 
 // FAQ ------------------------------------------------------
-var collapsibles = document.querySelectorAll(".collapsible");
+document.addEventListener("DOMContentLoaded", function () {
+  var collapsibles = document.querySelectorAll(".collapsible");
 
-collapsibles.forEach((button) => {
-  button.addEventListener("click", function () {
-    this.classList.toggle("active");
-    var content = this.nextElementSibling;
+  collapsibles.forEach((button) => {
+    button.addEventListener("click", function () {
+      var content = this.nextElementSibling;
+      var isExpanded = this.getAttribute("aria-expanded") === "true";
 
-    if (content.style.maxHeight) {
-      content.style.maxHeight = null;
-    } else {
-      content.style.maxHeight = content.scrollHeight + "px";
-    }
+      // Cerrar todas las respuestas
+      collapsibles.forEach((btn) => {
+        if (btn !== this) {
+          btn.setAttribute("aria-expanded", "false");
+          btn.nextElementSibling.style.maxHeight = null;
+          btn.classList.remove("active");
+          btn.querySelector(".icon").textContent = "+"; // Restablecer el ícono
+        }
+      });
+
+      // Alternar la respuesta actual
+      this.setAttribute("aria-expanded", !isExpanded);
+      content.style.maxHeight = isExpanded ? "0" : content.scrollHeight + "px";
+      this.classList.toggle("active", !isExpanded);
+      this.querySelector(".icon").textContent = isExpanded ? "+" : "-"; // Alternar ícono
+    });
   });
 });
 
@@ -193,25 +205,26 @@ function sendWhatsApp() {
     icon: "success",
     title: "¡Mensaje listo!",
     text: "Serás redirigido a WhatsApp en breve.",
-    timer: 2000, // Tiempo de la alerta
-    timerProgressBar: true, // Barra de progreso
-    showConfirmButton: false, // No mostrar botón de confirmación
+    timer: 2000,
+    timerProgressBar: true,
+    showConfirmButton: false,
     allowOutsideClick: false,
+  }).then(() => {
+    window.open(whatsappUrl, "_blank"); 
   });
-
-  // Verificar si el dispositivo es móvil
-  const isMobile = navigator.userAgent.includes("Mobi");
-  // Redirigir o abrir en nueva ventana dependiendo del dispositivo
-  setTimeout(() => {
-    if (isMobile) {
-      // En móviles, redirigimos directamente
-      window.location.href = whatsappUrl;
-    } else {
-      // En computadoras, abrimos en una nueva ventana
-      window.open(whatsappUrl, "_blank");
-    }
-  }, 2000);
 }
+// Verificar si el dispositivo es móvil
+const isMobile = navigator.userAgent.includes("Mobi");
+// Redirigir o abrir en nueva ventana dependiendo del dispositivo
+setTimeout(() => {
+  if (isMobile) {
+    // En móviles, redirigimos directamente
+    window.location.href = whatsappUrl;
+  } else {
+    // En computadoras, abrimos en una nueva ventana
+    window.open(whatsappUrl, "_blank");
+  }
+}, 2000);
 
 // Boton flotante
 window.addEventListener("scroll", function () {

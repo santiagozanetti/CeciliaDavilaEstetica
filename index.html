@@ -11,18 +11,6 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
-    <!-- <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-yHGVxyhN/3WDP+F7ZrEWBIF8U5brRV/INLRK+Qg2igKoIFUGfgVPNEfQGZpmsyZlQxdOSF7PHoqm7b/Owx8eHw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    /> -->
-
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-      rel="stylesheet"
-    />
 
     <link
       rel="stylesheet"
@@ -70,16 +58,13 @@
     <header class="header" id="home">
       <div class="section__container header__container">
         <h1>
-          Resaltá<br /><span
-            >tu belleza <br />
-            natural.</span
-          >
+          Resaltá<br /><span>tu belleza <br />natural.</span>
         </h1>
         <p>
           Tratamientos faciales y corporales <br />personalizados para adaptarse
-          a tus <br />
-          necesidades y tipo de piel.
+          a tus <br />necesidades y tipo de piel.
         </p>
+        <a href="#contact" class="header-button">Reserva tu cita</a>
       </div>
     </header>
 
@@ -153,9 +138,8 @@
           <i class="fas fa-user-check benefit-icon"></i>
           <h3>Tratamientos Personalizados</h3>
           <p>
-            Cada piel y cuerpo son únicos, y así es como tratamos a nuestros
-            clientes. Nuestros tratamientos personalizados están diseñados para
-            resaltar tu belleza natural, ¡sintiendo la diferencia desde la
+            Cada piel y cuerpo son únicos, nuestros tratamientos están diseñados
+            para resaltar tu belleza natural, ¡sintiendo la diferencia desde la
             primera sesión!
           </p>
         </div>
@@ -196,11 +180,11 @@
 
       <!-- Llamada a la Acción -->
       <div class="cta-container">
-        <p class="cta-text">
+        <p class="benefit-text">
           ¿Lista para transformar tu belleza?
           <strong>¡Reserva tu consulta gratuita hoy mismo!</strong>
         </p>
-        <a href="#contact" class="cta-button">Reservar Consulta</a>
+        <a href="#contact" class="benefit-button">Reservar Consulta</a>
       </div>
     </section>
 
@@ -270,7 +254,7 @@
 
     <!--------------------------------- PRODUCTOS --------------------------------------------->
 
-    <section class="product-section ">
+    <section class="product-section" id="store">
       <p class="section__subheader">Tienda</p>
       <h2 class="section__header">Productos Destacados</h2>
 
@@ -330,10 +314,9 @@
         <p class="section__subheader">Preguntas Frecuentes</p>
         <h2 class="section__header">Estamos para ayudarte</h2>
         <div class="faq_box">
-          <!-- Pregunta 1 -->
-          <button class="collapsible">
+          <button class="collapsible" aria-expanded="false">
             ¿Cuántas sesiones necesito para ver resultados en un tratamiento
-            corporal?
+            corporal?<span class="icon">+</span>
           </button>
           <div class="faqcontent">
             <p>
@@ -342,10 +325,11 @@
               primer sesión tu piel empieza a cambiar.
             </p>
           </div>
-
-          <!-- Pregunta 2 -->
-          <button class="collapsible">
-            ¿Puedo combinar varios tratamientos en una misma sesión?
+          <button class="collapsible" aria-expanded="false">
+            ¿Puedo combinar varios tratamientos en una misma sesión?<span
+              class="icon"
+              >+</span
+            >
           </button>
           <div class="faqcontent">
             <p>
@@ -353,25 +337,25 @@
               tratamientos combinados.
             </p>
           </div>
-
-          <!-- Pregunta 3 -->
-          <button class="collapsible">¿Cómo puedo reservar una sesión?</button>
+          <button class="collapsible" aria-expanded="false">
+            ¿Cómo puedo reservar una sesión?<span class="icon">+</span>
+          </button>
           <div class="faqcontent">
             <p>
               Se puede reservar a través de WhatsApp o llenando el formulario de
               contacto.
             </p>
           </div>
-
-          <button class="collapsible">
-            ¿Puedo regalar un tratamiento a alguien?
+          <button class="collapsible" aria-expanded="false">
+            ¿Puedo regalar un tratamiento a alguien?<span class="icon">+</span>
           </button>
           <div class="faqcontent">
             <p>Si, pedime tu giftcard con el tratamiento que querés regalar.</p>
           </div>
-
-          <button class="collapsible">
-            ¿Puedo hacerme tratamientos si estoy embarazada?
+          <button class="collapsible" aria-expanded="false">
+            ¿Puedo hacerme tratamientos si estoy embarazada?<span class="icon"
+              >+</span
+            >
           </button>
           <div class="faqcontent">
             <p>
@@ -379,9 +363,8 @@
               y limpiezas de cutis.
             </p>
           </div>
-
-          <button class="collapsible">
-            ¿Como puedo ver cambios más rápido?
+          <button class="collapsible" aria-expanded="false">
+            ¿Cómo puedo ver cambios más rápido?<span class="icon">+</span>
           </button>
           <div class="faqcontent">
             <p>
@@ -478,15 +461,14 @@
     <!--------------------------------- CONTACTO --------------------------------------------->
     <section id="contact" class="contact__section">
       <div class="section__container">
-        <p class="section__subheader">Conectá con nosotros</p>
+        <p class="section__subheader">Conéctate con nosotros</p>
         <h2 class="section__header">
           Tu bienestar está a un click de distancia
         </h2>
 
         <div class="contact__content">
-          <!-- Formulario de Contacto -->
           <div class="contact__form">
-            <form id="contactForm">
+            <form id="contactForm" aria-labelledby="contact-header">
               <div class="form__group">
                 <label for="name">Nombre</label>
                 <input
@@ -494,6 +476,7 @@
                   id="name"
                   placeholder="Escribí tu nombre"
                   required
+                  aria-required="true"
                 />
               </div>
               <div class="form__group">
@@ -503,6 +486,7 @@
                   id="lastname"
                   placeholder="Escribí tu apellido"
                   required
+                  aria-required="true"
                 />
               </div>
               <div class="form__group">
@@ -513,10 +497,11 @@
                   placeholder="Escribí tu mensaje"
                   required
                   style="resize: none"
+                  aria-required="true"
                 ></textarea>
               </div>
               <button
-                type="button"
+                type="submit"
                 class="submit__btn"
                 onclick="sendWhatsApp()"
               >
@@ -525,7 +510,6 @@
             </form>
           </div>
 
-          <!-- Mapa de Google Maps -->
           <div class="contact__map">
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.341607076717!2d-58.52859082453167!3d-34.46885735038813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1f603c9790b%3A0xc9c1f373f8a51285!2sESTETICA%20CECILIA%20DAVILA!5e0!3m2!1ses-419!2sar!4v1729550842539!5m2!1ses-419!2sar"
