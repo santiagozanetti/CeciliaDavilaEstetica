@@ -112,10 +112,10 @@ nav {
 .nav__links a {
   font-weight: 500;
   color: var(--text-dark);
-  position: relative; 
-  text-decoration: none; 
-  padding: 0.5rem 0; 
-  transition: color 0.3s; 
+  position: relative;
+  text-decoration: none;
+  padding: 0.5rem 0;
+  transition: color 0.3s;
 }
 
 .nav__links a::after {
@@ -123,14 +123,14 @@ nav {
   position: absolute;
   left: 0;
   bottom: -2px;
-  width: 0; 
-  height: 3px;
+  width: 0;
+  height: 2px;
   background-color: var(--primary-color);
-  transition: width 0.3s; 
+  transition: width 0.5s;
 }
 
 .nav__links a:hover::after {
-  width: 102%; 
+  width: 102%;
 }
 
 .nav__links a:hover {
@@ -206,34 +206,35 @@ nav {
 }
 
 .header-button:hover {
-  background-color: #c0392b;
+  background-color: var(--white);
+  color: var(--primary-color);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 768px) {
   .header__container {
     display: flex;
-    flex-direction: column; /* Colocar elementos en columna */
-    align-items: center; /* Centrar elementos */
-    text-align: center; /* Centrar texto */
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .header__container h1 {
-    margin-top: 3rem; /* Ajusta el margen superior según sea necesario */
-    margin-bottom: 1rem; /* Mantener margen inferior para separación con el párrafo */
-    font-size: 3.5rem; /* Tamaño de fuente para móviles */
-    line-height: 4rem; /* Ajustar interlineado */
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+    font-size: 3.5rem;
+    line-height: 4rem;
   }
 
   .header__container p {
-    font-size: 1.2rem; /* Reducir tamaño de fuente del párrafo */
-    margin-bottom: 2rem; /* Ajustar margen inferior */
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
   }
 
   .header-button {
-    padding: 10px 20px; /* Ajustar padding del botón */
-    font-size: 1rem; /* Ajustar tamaño de fuente del botón */
-    margin-top: 1.5rem; /* Ajustar margen superior */
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 1.5rem;
   }
 }
 
@@ -270,12 +271,12 @@ nav {
   padding: 1rem;
   margin-bottom: 1rem;
   display: inline-block;
-  transition: background 0.3s ease; /* Transición para el hover */
+  transition: background 0.3s ease;
 }
 
 .benefit-card:hover .benefit-icon {
-  background: var(--primary-color); /* Cambia el fondo al hacer hover */
-  color: var(--white); /* Cambia el color del icono al hacer hover */
+  background: var(--primary-color);
+  color: var(--white);
 }
 
 .benefit-card h3 {
@@ -292,7 +293,7 @@ nav {
 
 /* Estilo adicional para la sección */
 #benefits {
-  padding: 5rem 0; /* Espaciado superior e inferior */
+  padding: 5rem 0;
 }
 
 .cta-container {
@@ -331,31 +332,31 @@ nav {
   margin-top: 2rem;
   display: flex;
   gap: 2rem;
-  flex-direction: row; /* Cambiado a fila para mejor disposición */
-  align-items: center; /* Alinear verticalmente */
+  flex-direction: row;
+  align-items: center;
   overflow: hidden;
 }
 
 .about__image {
   flex: 1;
   max-width: 400px;
-  border-radius: 12px; /* Bordes redondeados para la imagen */
-  overflow: hidden; /* Para que la imagen no sobresalga */
+  border-radius: 12px;
+  overflow: hidden;
 }
 
 .about__image img {
   width: 100%;
-  height: auto; /* Mantener la proporción de la imagen */
-  transition: transform 0.3s ease; /* Efecto de zoom al pasar el ratón */
+  height: auto;
+  transition: transform 0.3s ease;
 }
 
 .about__image:hover img {
-  transform: scale(1.05); /* Efecto de zoom al pasar el ratón */
+  transform: scale(1.05);
 }
 
 .about__content {
   flex: 1;
-  text-align: left; /* Alinear texto a la izquierda */
+  text-align: left;
 }
 
 .about__content h4 {
@@ -364,16 +365,16 @@ nav {
   font-size: 2rem;
   font-weight: 500;
   color: var(--text-dark);
-  line-height: 1.5; /* Espaciado más natural */
+  line-height: 1.5;
 }
 
 .about__content p {
   max-width: 450px;
   color: var(--text-light);
-  line-height: 1.6; /* Mejora la legibilidad */
+  line-height: 1.6;
 }
 
-/* Estilos para los íconos (si decides usarlos) */
+/* Estilos para los íconos  */
 .about__content span {
   margin-inline: auto;
   margin-bottom: 1rem;
@@ -389,48 +390,48 @@ nav {
   max-width: 40px;
 }
 
-/* Estilos para cada fila */
 .about__row:nth-child(odd) {
-  background-color: #e8f7fe; /* Color de fondo suave para filas impares */
-  padding: 2rem; /* Espaciado interno */
-  border-radius: 12px; /* Bordes redondeados */
+  background-color: #e8f7fe;
+  padding: 2rem;
+  border-radius: 12px;
 }
 
 .about__row:nth-child(even) {
-  background-color: #fbebf1; /* Color de fondo suave para filas pares */
-  padding: 2rem; /* Espaciado interno */
-  border-radius: 12px; /* Bordes redondeados */
+  background-color: #fbebf1;
+  padding: 2rem;
+  border-radius: 12px;
 }
 
-/* Media Queries para Responsividad */
+/* Media Queries */
 @media (max-width: 768px) {
   .about__row {
-    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-    align-items: center; /* Centrar contenido */
+    flex-direction: column;
+    align-items: center;
   }
 
   .about__image {
-    max-width: 100%; /* Hacer que la imagen ocupe el 100% del ancho */
+    max-width: 100%;
+    border-radius: 12px;
   }
 
   .about__content h4 {
-    font-size: 1.8rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+    font-size: 1.8rem;
     text-align: center;
   }
 
   .about__content p {
-    font-size: 1rem; /* Reducir tamaño de fuente en pantallas pequeñas */
+    font-size: 1rem;
     text-align: center;
   }
 }
 
 @media (max-width: 480px) {
   .about__content h4 {
-    font-size: 1.6rem; /* Ajustar aún más el tamaño de fuente */
+    font-size: 1.6rem;
   }
 
   .about__content p {
-    font-size: 0.9rem; /* Ajustar aún más el tamaño de fuente */
+    font-size: 0.9rem;
   }
 }
 
@@ -474,16 +475,16 @@ nav {
   font-size: 1.5rem;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
-  font-weight: 600; /* Hacer el título más destacado */
-  text-align: center; /* Centrar el título */
-  text-transform: uppercase; /* Convertir a mayúsculas para un efecto más estético */
+  font-weight: 600;
+  text-align: center;
+  text-transform: uppercase;
 }
 
 .product-description {
   font-size: 1rem;
   color: var(--text-light);
   margin: 0.5rem 0 1rem;
-  text-align: center; /* Centrar la descripción */
+  text-align: center;
 }
 
 .product-price {
@@ -493,36 +494,36 @@ nav {
   text-align: center;
 }
 
-/* Media Queries para Responsividad */
+/* Media Queries  */
 @media (max-width: 768px) {
   .product-section {
-    padding: 3rem 2rem; /* Reducir el espaciado lateral en pantallas pequeñas */
+    padding: 3rem 2rem;
   }
 
   .product-title {
-    font-size: 1.3rem; /* Reducir el tamaño de fuente del título */
+    font-size: 1.3rem;
   }
 
   .product-description {
-    font-size: 0.9rem; /* Reducir el tamaño de fuente de la descripción */
+    font-size: 0.9rem;
   }
 
   .product-price {
-    font-size: 1rem; /* Reducir el tamaño de fuente del precio */
+    font-size: 1rem;
   }
 }
 
 @media (max-width: 480px) {
   .product-title {
-    font-size: 1.2rem; /* Ajustar aún más el tamaño de fuente del título */
+    font-size: 1.2rem;
   }
 
   .product-description {
-    font-size: 0.85rem; /* Ajustar aún más el tamaño de fuente de la descripción */
+    font-size: 0.85rem;
   }
 
   .product-price {
-    font-size: 0.9rem; /* Ajustar aún más el tamaño de fuente del precio */
+    font-size: 0.9rem;
   }
 }
 
@@ -646,70 +647,67 @@ nav {
 }
 
 .treatment-info h3 {
-  font-size: 1.5rem; /* Tamaño del nombre del tratamiento */
-  color: var(--text-dark); /* Color del texto */
-  margin: 1rem 0; /* Margen superior e inferior */
+  font-size: 1.5rem;
+  color: var(--text-dark);
+  margin: 1rem 0;
   font-weight: 500;
 }
 
 .treatment-info p {
-  color: #555; /* Color del texto de la descripción */
+  color: #555;
 }
 
 .price {
-  font-size: 1.2rem; /* Tamaño del precio */
-  font-weight: bold; /* Negrita para el precio */
-  color: var(--primary-color); /* Color del precio */
-  margin: 0.5rem 0; /* Margen superior e inferior */
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: var(--primary-color);
+  margin: 0.5rem 0;
 }
 
-/* Estilos de Botones */
+/*  Botones */
 .cta-button {
-  padding: 1rem 2rem; /* Espaciado interno */
-  background-color: var(--primary-color); /* Color de fondo */
-  color: #ffffff; /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 5px; /* Bordes redondeados */
-  cursor: pointer; /* Cambiar cursor al pasar */
-  text-align: center; /* Centrar texto */
-  text-decoration: none; /* Sin subrayado */
-  transition: background-color 0.3s; /* Transición suave */
+  padding: 1rem 2rem;
+  background-color: var(--primary-color);
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: background-color 0.3s;
   margin-top: 1.5rem;
 }
 
 .cta-button:hover {
-  background-color: var(
-    --secondary-color
-  ); /* Cambiar color al pasar el mouse */
+  background-color: var(--secondary-color);
 }
 
-/* Estilos de la Sección de Llamado a la Acción */
 .cta-section {
-  text-align: center; /* Centrar texto */
-  margin: 10rem 0; /* Margen superior e inferior */
+  text-align: center;
+  margin: 10rem 0;
   color: var(--text-light);
 }
 
 .cta-section h2 {
-  font-size: 2rem; /* Tamaño del encabezado */
-  margin-bottom: 1rem; /* Margen inferior */
+  font-size: 2rem;
+  margin-bottom: 1rem;
   color: var(--primary-color);
 }
 
 .cta-section p {
-  font-size: 1.2rem; /* Tamaño del párrafo */
-  margin-bottom: 1rem; /* Margen inferior */
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
 }
 
 /* Responsividad */
 @media (max-width: 900px) {
   .treatment-grid {
-    flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
-    align-items: center; /* Centrar elementos */
+    flex-direction: column;
+    align-items: center;
   }
 
   .treatment-item {
-    width: 90%; /* Ajustar ancho en pantallas pequeñas */
+    width: 90%;
   }
 }
 
@@ -885,7 +883,7 @@ nav {
   width: 45px;
   height: 45px;
   font-size: 1.8rem;
-  color: var(--text-dark);
+  color: var(--white);
   background-color: var(--primary-color);
   border-radius: 50%;
   transition: background-color 0.3s, transform 0.3s;
@@ -894,7 +892,7 @@ nav {
 .footer__socials a:hover {
   background-color: var(--secondary-color);
   color: var(--white);
-  transform: scale(1.1); /* Animación de escalado */
+  transform: scale(1.1);
 }
 
 .footer__bar {
@@ -1022,14 +1020,14 @@ nav {
 
 /* Estilo de la parte que se desplaza */
 ::-webkit-scrollbar-thumb {
-  background-color: var(--primary-color); /* Color de la scrollbar */
+  background-color: #c75b3c; /* Color de la scrollbar (Terracota) */
   border-radius: 10px;
-  border: 3px solid var(--primary-color);
+  border: 3px solid var(--white); /* Borde blanco para mayor contraste */
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background-color: var(--text-light); /* Cambia de color al hacer hover */
-  border: 3px solid var(--text-light);
+  background-color: #a65d3b; /* Color más oscuro al hacer hover */
+  border: 3px solid #f9e6d6; /* Borde claro al hacer hover */
 }
 
 /*----------------------------- CONTACTO ---------------------------*/
@@ -1272,16 +1270,16 @@ textarea {
   color: #fff;
   border-radius: 50%;
   text-align: center;
-  font-size: 35px;
+  font-size: 2rem; /* Usar rem para mejor escalabilidad */
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   z-index: 999;
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Transiciones suaves */
 }
 
 .btn-wsp:hover {
   text-decoration: none;
   color: #fff;
   background-color: #0b9b42;
-  transition: 0.3s ease-in-out;
 }
 
 .btn-scroll-top {
@@ -1298,12 +1296,12 @@ textarea {
   box-shadow: 0px 1px 10px rgba(0, 0, 0, 0.3);
   cursor: pointer;
   color: var(--primary-color);
+  font-size: 1.5rem; 
+  transition: background-color 0.3s ease-in-out, box-shadow 0.3s ease-in-out; 
 }
 
 .btn-scroll-top:hover {
   background-color: var(--primary-color);
-  transition: 0.3s ease-in-out;
-  text-decoration: none;
   color: var(--white);
 }
 
@@ -1317,9 +1315,7 @@ textarea {
     right: 10px;
     bottom: 20px;
   }
-}
 
-@media (max-width: 768px) {
   .btn-scroll-top {
     width: 30px;
     height: 30px;

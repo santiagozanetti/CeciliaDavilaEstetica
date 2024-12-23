@@ -18,8 +18,11 @@ const scrollRevealOption = {
   distance: "50px",
   origin: "bottom",
   duration: 1000,
+  // Añadido para evitar animaciones en dispositivos móviles
+  mobile: false, // Desactiva las animaciones en dispositivos móviles
 };
 
+// Animaciones para la cabecera
 ScrollReveal().reveal(".header__container h1", {
   ...scrollRevealOption,
 });
@@ -31,13 +34,12 @@ ScrollReveal().reveal(".header__container form", {
   ...scrollRevealOption,
   delay: 1000,
 });
-
 ScrollReveal().reveal(".treatment-grid", {
   ...scrollRevealOption,
   delay: 1000,
 });
 
-// beneficios
+// Animaciones para beneficios
 ScrollReveal().reveal("#benefits h2", {
   ...scrollRevealOption,
 });
@@ -54,11 +56,11 @@ ScrollReveal().reveal(".benefits-grid p", {
   delay: 1500,
 });
 
+// Animaciones para la sección "About"
 ScrollReveal().reveal(".intro__card", {
   ...scrollRevealOption,
   interval: 500,
 });
-
 ScrollReveal().reveal(
   ".about__row:nth-child(3) .about__image img, .about__row:nth-child(5) .about__image img",
   {
@@ -83,16 +85,17 @@ ScrollReveal().reveal(".about__content p", {
   delay: 1200,
 });
 
+// Animaciones para productos y servicios
 ScrollReveal().reveal(".product__card", {
   ...scrollRevealOption,
   interval: 500,
 });
-
 ScrollReveal().reveal(".service__card", {
   duration: 1000,
   interval: 500,
 });
 
+// Inicialización de Swiper
 if (document.querySelector(".swiper")) {
   const swiper = new Swiper(".swiper", {
     slidesPerView: 3,
@@ -101,21 +104,19 @@ if (document.querySelector(".swiper")) {
   });
 }
 
+// Animaciones para Instagram y secciones
 ScrollReveal().reveal(".instagram__grid img", {
   duration: 1000,
   interval: 500,
 });
-
 ScrollReveal().reveal(".section__container h2", {
   ...scrollRevealOption,
   delay: 500,
 });
-
-ScrollReveal().reveal(".service-item ", {
+ScrollReveal().reveal(".service-item", {
   ...scrollRevealOption,
   delay: 1000,
 });
-
 ScrollReveal().reveal(".service-content", {
   ...scrollRevealOption,
   delay: 1500,
@@ -210,7 +211,7 @@ function sendWhatsApp() {
     showConfirmButton: false,
     allowOutsideClick: false,
   }).then(() => {
-    window.open(whatsappUrl, "_blank"); 
+    window.open(whatsappUrl, "_blank");
   });
 }
 // Verificar si el dispositivo es móvil
