@@ -19,7 +19,7 @@ const scrollRevealOption = {
   origin: "bottom",
   duration: 1000,
   // Añadido para evitar animaciones en dispositivos móviles
-  mobile: false, // Desactiva las animaciones en dispositivos móviles
+  mobile: false,
 };
 
 // Animaciones para la cabecera
@@ -230,17 +230,31 @@ setTimeout(() => {
 // Boton flotante
 window.addEventListener("scroll", function () {
   var btnScrollTop = document.getElementById("btnScrollTop");
+  // Cambia el valor de scrollTop para que el botón aparezca antes
   if (
     document.body.scrollTop > 20 ||
-    document.documentElement.scrollTop > 1200
+    document.documentElement.scrollTop > 1000
   ) {
-    btnScrollTop.style.display = "block";
+    btnScrollTop.style.display = "block"; // Muestra el botón
   } else {
-    btnScrollTop.style.display = "none";
+    btnScrollTop.style.display = "none"; // Oculta el botón
   }
+});
+
+btnScrollTop.addEventListener("click", function (e) {
+  e.preventDefault(); // Evita el comportamiento predeterminado del enlace
+  document.querySelector("#home").scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
 });
 
 document.getElementById("btnScrollTop").addEventListener("click", function () {
   document.body.scrollTop = 0;
   document.documentElement.scrollTop = 0;
 });
+
+// boton para reservar
+function scrollToContact() {
+  const contactSection = document.getElementById("contact");
+  if (contactSection) {
+    contactSection.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
+  }
+}

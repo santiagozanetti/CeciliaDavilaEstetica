@@ -3,6 +3,15 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Descubre nuestros tratamientos faciales personalizados en San Isidro. Reservá tu cita hoy mismo y realza tu belleza natural."
+    />
+    <meta
+      name="keywords"
+      content="estética, belleza, tratamientos faciales, cuidado de la piel, spa, San Isidro, Zona Norte, Buenos Aires, peeling, dermapen"
+    />
+    <meta name="author" content="Santiago Zanetti" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -11,31 +20,34 @@
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
     />
+
     <link
       rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-      integrity="sha512-yHGVxyhN/3WDP+F7ZrEWBIF8U5brRV/INLRK+Qg2igKoIFUGfgVPNEfQGZpmsyZlQxdOSF7PHoqm7b/Owx8eHw=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
 
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
+    <link rel="icon" href="./assets/icono-pluma.webp" />
 
-    <link rel="icon" href="./assets/icono-pluma.jpg" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
+      rel="stylesheet"
+    />
     <title>Estética Cecilia Dávila | Tratamientos Corporales</title>
   </head>
   <body>
     <nav>
       <div class="nav__header">
         <div class="nav__logo">
-          <a href="/index.html">
+          <a href="#">
             <img
-              src="assets/icono-pluma.jpg"
-              alt="Feather Icon"
+              src="assets/icono-pluma.webp"
+              alt="Icono pluma"
               class="logo-icon"
+              loading="lazy"
           /></a>
-          <a href="/index.html">Estética Cecilia Dávila</a>
+          <a href="index.html#">Estética Cecilia Dávila</a>
         </div>
 
         <div class="nav__menu__btn" id="menu-btn">
@@ -43,11 +55,11 @@
         </div>
       </div>
       <ul class="nav__links" id="nav-links">
-        <li><a href="/index.html#benefits">Beneficios</a></li>
-        <li><a href="/index.html#about">Nosotros</a></li>
-        <li><a href="/index.html#store">Productos</a></li>
-        <li><a href="/index.html#services">Servicios</a></li>
-        <li><a href="/index.html#contact">Contacto</a></li>
+        <li><a href="index.html#nav__links">Inicio</a></li>
+        <li><a href="index.html#benefits">Beneficios</a></li>
+        <li><a href="index.html#about">Nosotros</a></li>
+        <li><a href="index.html#store">Productos</a></li>
+        <li><a href="index.html#contact">Contacto</a></li>
       </ul>
     </nav>
 
@@ -61,142 +73,242 @@
     <section class="section__container" id="body-treatments">
       <p class="section__subheader">Renová tu cuerpo, potencia tu bienestar</p>
       <h2 class="section__header">Tratamientos Corporales</h2>
-
       <div class="treatment-grid">
         <div class="treatment-item">
           <img
-            src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="HIMFU"
+            src="./assets/limpiezacutis.png"
+            alt="Limpieza de Cutis"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>HIMFU</h3>
             <p>
-              Moldea tu figura y reduce la grasa localizada con esta avanzada
-              tecnología, ideal para resultados visibles en poco tiempo.
+              Tratamiento no invasivo que utiliza ondas ultrasónicas para
+              eliminar la adiposidad localizada, mejorando la apariencia de
+              áreas como el abdomen y los muslos.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
             src="./assets/cosmetologist-applying-mask-face-client-beauty-salon.jpg"
-            alt="Criofrecuencia"
+            alt="Peeling Facial"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>Criofrecuencia</h3>
             <p>
-              Combina frío y calor para reafirmar tu piel, reducir celulitis y
-              promover una apariencia más tonificada.
+              Combina frío extremo y calor interno para estimular la producción
+              de colágeno, reduciendo la grasa localizada y mejorando la firmeza
+              de la piel.
             </p>
             <p class="price">$50</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
-            src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="Termoterapia"
+            src="./assets/dermapen.png"
+            alt="Dermapen"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>Termoterapia</h3>
             <p>
-              Activa la circulación y estimula la eliminación de toxinas para un
-              cuerpo renovado y lleno de energía.
+              Utiliza calor para mejorar la circulación y la producción de
+              colágeno, ayudando a reducir arrugas y flacidez, mientras
+              proporciona una sensación de relajación.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
-            src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="Body Up"
-            loading="lazy"
+            src="./assets/demaplaning.png"
+            alt="Dermaplaning"
             class="treatment-image"
+            loading="lazy"
           />
           <div class="treatment-info">
             <h3>Body Up</h3>
             <p>
-              Tonifica y fortalece tu cuerpo con este tratamiento no invasivo
-              que redefine tus curvas de manera natural.
+              Exfolia y elimina células muertas, dejando la piel suave y
+              revitalizada, ideal para lucir radiante en cualquier ocasión.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
-            src="./assets/young-woman-making-massage-spa-center.jpg"
-            alt="Ultracavitación"
+            src="./assets/yogafacial.png"
+            alt="Yoga Facial"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>Ultracavitación</h3>
             <p>
-              Elimina la grasa localizada con ultrasonido, logrando una silueta
-              más esbelta y definida en pocas sesiones.
+              Usa ultrasonido para romper células de grasa, tonificando el
+              cuerpo y mejorando la circulación para un contorno más definido.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
             src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="Masajes reductores"
+            alt="Drenaje Linfático"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>Masajes reductores</h3>
             <p>
-              Disminuye medidas, reduce celulitis y relaja tu cuerpo con
-              técnicas manuales personalizadas para tus objetivos.
+              Técnicas manuales que reducen la hinchazón y eliminan toxinas,
+              mejorando la circulación y proporcionando relajación.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
 
         <div class="treatment-item">
           <img
             src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="Vendas frías"
+            alt="Crio Radiofrecuencia"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
-            <h3>Vendas frías</h3>
+            <h3>Vendas Frías</h3>
             <p>
-              Reduce medidas y reafirma tu piel gracias a los efectos
-              tonificantes del frío, ideales para combatir celulitis.
+              Tratamiento que mejora la microcirculación y reduce la retención
+              de líquidos, ayudando a reafirmar la piel y combatir la celulitis.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
           </div>
         </div>
-
         <div class="treatment-item">
           <img
             src="./assets/closeup-beautiful-woman-getting-white-facial-mask-spa-treatment-beauty-salon.jpg"
-            alt="Vendas frías"
+            alt="Crio Radiofrecuencia"
             class="treatment-image"
             loading="lazy"
           />
           <div class="treatment-info">
             <h3>Drenaje linfático manual</h3>
             <p>
-              Reduce la inflamación y la retención de líquidos. Reduce la
-              apariencia de celulitis y promueve una piel más tersa y
-              tonificada.
+              Estimula el sistema linfático para eliminar toxinas y reducir la
+              retención de líquidos, proporcionando una sensación de ligereza y
+              bienestar.
             </p>
             <p class="price">$40</p>
+            <button class="cta-button" onclick="scrollToContact()">
+              Reservar Ahora
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <div class="cta-section">
+        <h2>¡No esperes más para lucir radiante!</h2>
+        <p>
+          Reservá tu cita hoy y descubrí la transformación que nuestros
+          tratamientos pueden ofrecerte.
+        </p>
+        <button class="cta-button" onclick="scrollToContact()">
+          Reservar Ahora
+        </button>
+      </div>
+    </section>
+
+    <!--------------------------------- CONTACTO --------------------------------------------->
+    <section id="contact" class="contact__section">
+      <div class="section__container">
+        <p class="section__subheader">Conéctate con nosotros</p>
+        <h2 class="section__header">
+          Tu bienestar está a un click de distancia
+        </h2>
+
+        <div class="contact__content">
+          <div class="contact__form">
+            <form id="contactForm" aria-labelledby="contact-header">
+              <div class="form__group">
+                <label for="name">Nombre</label>
+                <input
+                  type="text"
+                  id="name"
+                  placeholder="Escribí tu nombre"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form__group">
+                <label for="lastname">Apellido</label>
+                <input
+                  type="text"
+                  id="lastname"
+                  placeholder="Escribí tu apellido"
+                  required
+                  aria-required="true"
+                />
+              </div>
+              <div class="form__group">
+                <label for="message">Mensaje</label>
+                <textarea
+                  id="message"
+                  rows="4"
+                  placeholder="Escribí tu mensaje"
+                  required
+                  style="resize: none"
+                  aria-required="true"
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="submit__btn"
+                onclick="sendWhatsApp()"
+              >
+                Enviar mensaje
+              </button>
+            </form>
+          </div>
+
+          <div class="contact__map">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3289.341607076717!2d-58.52859082453167!3d-34.46885735038813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bcb1f603c9790b%3A0xc9c1f373f8a51285!2sESTETICA%20CECILIA%20DAVILA!5e0!3m2!1ses-419!2sar!4v1729550842539!5m2!1ses-419!2sar"
+              allowfullscreen=""
+              title="mapa"
+              loading="lazy"
+            ></iframe>
           </div>
         </div>
       </div>
@@ -208,49 +320,70 @@
       <div class="section__container footer__container">
         <div class="footer__col">
           <div class="footer__logo">
-            <a href="#">Cecilia Dávila Estética</a>
+            <a href="#">Estética Cecilia Dávila</a>
           </div>
         </div>
         <div class="footer__col">
           <h4>Links</h4>
           <ul class="footer__links">
-            <li><a href="/index.html#benefits">Beneficios</a></li>
-            <li><a href="/index.html#about">Nosotros</a></li>
-            <li><a href="/index.html#store">Productos</a></li>
-            <li><a href="/index.html#services">Servicios</a></li>
-            <li><a href="/index.html#contact">Contacto</a></li>
+            <li><a href="index.html#nav__links">Inicio</a></li>
+            <li><a href="index.html#about">Sobre Nosotros</a></li>
+            <li><a href="index.html#service">Servicios</a></li>
+            <li><a href="index.html#store">Productos</a></li>
+            <li><a href="index.html#faqs">Faq</a></li>
+            <li><a href="index.html#contact">Contacto</a></li>
           </ul>
         </div>
         <div class="footer__col">
           <h4>Dirección</h4>
           <ul class="footer__links">
-            <li><a href="#">Liniers 500, San Isidro</a></li>
-            <li><a href="#">Ver en maps</a></li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/9Yc4n2JPDXp7uMhE8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Liniers 500, San Isidro</a
+              >
+            </li>
+            <li>
+              <a
+                href="https://maps.app.goo.gl/9Yc4n2JPDXp7uMhE8"
+                target="_blank"
+                rel="noopener noreferrer"
+                >Ver en maps</a
+              >
+            </li>
           </ul>
           <br />
           <h4>Consultas</h4>
           <ul class="footer__links">
-            <li><a href="#">+54 1150377127</a></li>
-            <li><a href="#">cecilia@gmail.com</a></li>
+            <li>
+              <a href="https://wa.me/+5491150377127" target="_blank"
+                >+54 1150377127</a
+              >
+            </li>
           </ul>
         </div>
         <div class="footer__col">
-          <!-- <h4>Newsletter</h4>
-          <p>Stay updated with out latest news</p>
-          <form action="/">
-            <input type="text" placeholder="Your email" />
-            <button class="btn">
-              <i class="ri-arrow-right-line"></i>
-            </button>
-          </form> -->
-          <!-- <br /> -->
           <h4>Mantenete al tanto!</h4>
           <ul class="footer__socials">
             <li>
-              <a href="#"><i class="ri-facebook-fill"></i></a>
+              <a
+                href="https://www.instagram.com/esteticasanisidro/"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-instagram-line"></i>
+              </a>
             </li>
             <li>
-              <a href="#"><i class="ri-instagram-line"></i></a>
+              <a
+                href="https://www.facebook.com/ceciliadavilaestetica"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="ri-facebook-fill"></i>
+              </a>
             </li>
           </ul>
         </div>
@@ -260,8 +393,30 @@
       </div>
     </footer>
 
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <!------------- BOTONES FLOTANTES -------------->
+    <a
+      href="https://wa.me/+5491150377127"
+      class="btn-wsp"
+      target="_blank"
+      aria-label="Enviar mensaje por WhatsApp"
+    >
+      <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <a
+      class="btn-scroll-top"
+      id="btnScrollTop"
+      aria-label="Volver arriba"
+      title="Volver arriba"
+      href="#body-treatments"
+    >
+      <i class="fa-solid fa-angle-up"></i>
+    </a>
+
+    <!-- <script src="https://unpkg.com/scrollreveal"></script> -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <script src="./js/main.js"></script>
+    <!-- SweetAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11" defer></script>
   </body>
 </html>
