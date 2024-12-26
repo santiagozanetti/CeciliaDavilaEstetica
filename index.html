@@ -28,7 +28,7 @@
 
     <link rel="stylesheet" href="./css/styles.css" />
     <link rel="stylesheet" href="./css/normalize.css" />
-    <link rel="icon" href="./assets/icono-pluma.webp" />
+    <link rel="icon" href="./assets/" />
 
     <link
       href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css"
@@ -73,7 +73,7 @@
           Tratamientos faciales y corporales <br />personalizados para adaptarse
           a tus <br />necesidades y tipo de piel.
         </p>
-        <a href="#contact" class="header-button">Reservá tu cita</a>
+        <a href="#about" class="header-button">¡Quiero Saber Más!</a>
       </div>
     </header>
 
@@ -81,7 +81,7 @@
 
     <section class="section__container" id="services">
       <p class="section__subheader">Belleza y relajación en un solo lugar</p>
-      <h2 class="section__header">Explora nuestros tratamientos</h2>
+      <h2 class="section__header">Explorá nuestros tratamientos</h2>
 
       <div class="services-wrapper">
         <!-- Categoría: Tratamientos Faciales -->
@@ -95,16 +95,16 @@
           <div class="service-content">
             <h3>Faciales</h3>
             <p>
-              Desde limpiezas profundas hasta tecnología avanzada como
-              criofrecuencia y dermapen, nuestros tratamientos faciales están
-              diseñados para resaltar tu belleza natural y devolverle
-              luminosidad a tu piel.
+              Desde limpiezas profundas que purifican tu piel hasta innovadores
+              tratamientos como criofrecuencia y dermapen, nuestros servicios
+              están diseñados para resaltar tu belleza natural, dejándote con
+              una piel radiante y rejuvenecida.
             </p>
             <button
               class="btn"
               onclick="location.href='tratamientos-faciales.html'"
             >
-              Ver todos
+              Ver Todos
             </button>
           </div>
         </div>
@@ -112,7 +112,7 @@
         <!-- Categoría: Tratamientos Corporales -->
         <div class="service-item service-reverse">
           <img
-            src="./assets/laser-epilation-hair-removal-therapy.jpg"
+            src="./assets/corporal.png"
             alt="Imagen representativa de tratamientos corporales"
             class="service-image"
             loading="lazy"
@@ -122,16 +122,32 @@
             <p>
               Redefiní tu figura con tratamientos como ultracavitación, masajes
               reductores y termoterapia. Ideales para tonificar y cuidar tu
-              cuerpo en un ambiente relajante.
+              cuerpo en un ambiente relajante, ayudándote a sentirte más segura
+              y revitalizada.
             </p>
             <button
               class="btn"
               onclick="location.href='tratamientos-corporales.html'"
             >
-              Ver todos
+              Ver Todos
             </button>
           </div>
         </div>
+      </div>
+    </section>
+
+    <section class="brands-section section__container">
+      <h2 class="section__subheader">Marcas que Confían en Nosotros</h2>
+      <div class="brands-logos">
+        <img
+          src="assets/lidherma2.png"
+          alt="Logo Lidherma"
+          class="brand-logo"
+        />
+        <img src="assets/laca.png" alt="Logo Idraet" class="brand-logo" />
+        <img src="assets/idreat.png" alt="Logo Laca" class="brand-logo" />
+        <img src="assets/zine.png" alt="Logo Zine" class="brand-logo" />
+        <img src="assets/exel.png" alt="Logo Exel" class="brand-logo" />
       </div>
     </section>
 
@@ -386,86 +402,6 @@
     </section>
 
     <!--------------------------------- TESTIMONIOS --------------------------------------------->
-    <!-- <section class="section__container client__container">
-      <p class="section__subheader">Testimonios</p>
-      <h2 class="section__header">Nuestras clientes hablan por nosotros</h2>
-      <div class="client__card active">
-        <img src="assets/instagram-1.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>Cristina Quiroga</h4>
-          <h5>Paciente</h5>
-          <p>
-            Excelente la cordialidad y el servicio que ofrece, a mi me ayudo
-            muchísimo con el drenaje linfático y sin dejar de lado la limpieza
-            de cutis. Realmente una genia Cecilia
-          </p>
-        </div>
-      </div>
-      <div class="client__card">
-        <img src="assets/instagram-2.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>María Eugenia Gomes</h4>
-          <h5>Paciente</h5>
-          <p>
-            Excelente todo lo que hace! Yo me hago pelling, radiofrecuencia,
-            dermapen y limpieza profunda de cutis y me deja la piel genial!
-            Además de que te asesora con lo que necesitas, te brinda productos y
-            tiene buenas promociones!! Cecilia es muy cálida en su atención!
-          </p>
-        </div>
-      </div>
-      <div class="client__card">
-        <img src="assets/instagram-3.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>Laura Pollitzer de Cassese</h4>
-          <h5>Paciente</h5>
-          <p>
-            Muy buenos los tratamientos y la atención es súper cálida Vale la
-            pena a mi me dió muy buenos resultados Calidad precio es muy
-            adecuada
-          </p>
-        </div>
-      </div>
-      <div class="client__card">
-        <img src="assets/instagram-3.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>Natalia Iwasetschko</h4>
-          <h5>Paciente</h5>
-          <p>
-            Cecilia es una excelente profesional. Realiza tratamientos faciales
-            y corporales a medida, intercalando masajes manuales y aparatlogía
-            para conseguir resultados increíbles.
-          </p>
-        </div>
-      </div>
-      <div class="client__card">
-        <img src="assets/instagram-3.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>Maria Oliva Vélez Herbin</h4>
-          <h5>Paciente</h5>
-          <p>Excelente y cálida atención! Muy buenos precios y promos</p>
-        </div>
-      </div>
-      <div class="client__card">
-        <img src="assets/instagram-3.webp" loading="lazy" alt="client" />
-        <div class="client__content">
-          <h4>Paula Matarazzo</h4>
-          <h5>Paciente</h5>
-          <p>
-            Graaaaaacias por los tratamientos q me hiciste...y el peeling muuuy
-            bueno!!!!
-          </p>
-        </div>
-      </div>
-      <div class="client__btns">
-        <button class="btn" id="prev">
-          <i class="ri-arrow-left-line"></i>
-        </button>
-        <button class="btn" id="next">
-          <i class="ri-arrow-right-line"></i>
-        </button>
-      </div>
-    </section> -->
 
     <section class="testimonios section__container">
       <p class="section__subheader">Testimonios</p>
@@ -671,7 +607,15 @@
           </ul>
         </div>
         <div class="footer__col">
-          <h4>Mantenete al tanto!</h4>
+          <h4>Días y Horarios</h4>
+          <ul class="footer__links">
+            <li>
+              Lunes a Viernes: <br />
+              10:00 AM - 20:00 PM
+            </li>
+          </ul>
+          <br />
+          <h4>Conectate con Nosotros</h4>
           <ul class="footer__socials">
             <li>
               <a
@@ -693,6 +637,7 @@
             </li>
           </ul>
         </div>
+        <div class="footer__col"></div>
       </div>
       <div class="footer__bar">
         Copyright © 2024 Cecilia Dávila Estética. Todos los derechos reservados.

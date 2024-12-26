@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 
 :root {
   --primary-color: #c6a57a;
@@ -56,7 +56,7 @@ body {
 }
 
 body {
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", serif;
 }
 
 /* ------------------------------- MENÚ ---------------------------------------  */
@@ -154,7 +154,7 @@ nav {
   padding-block: 0rem;
   background-image: linear-gradient(
       to right,
-      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.7),
       rgba(0, 0, 0, 0)
     ),
     url("../assets/inicio.webp");
@@ -166,17 +166,17 @@ nav {
 
 .header__container h1 {
   margin-bottom: 1rem;
-  font-size: 5rem; /* Aumentar el tamaño de la fuente */
-  font-weight: 400; /* Peso más pesado para mayor énfasis */
+  font-size: 5rem;
+  font-weight: 400;
   color: var(--primary-color);
-  line-height: 6rem; /* Aumentar el interlineado */
+  line-height: 6rem;
   text-align: left;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3); /* Sombra para resaltar */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
 .header__container h1 span {
-  font-size: 5rem; /* Mantener el tamaño */
-  font-weight: 400; /* Peso más pesado para el span */
+  font-size: 5rem;
+  font-weight: 400;
 }
 
 .header__container p {
@@ -188,9 +188,9 @@ nav {
 }
 
 .header__container {
-  display: flex; /* Usar flexbox para alinear elementos */
-  flex-direction: column; /* Colocar elementos en columna */
-  align-items: flex-start; /* Alinear a la izquierda */
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
 }
 
 .header-button {
@@ -199,10 +199,10 @@ nav {
   background-color: var(--primary-color);
   color: white;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   font-weight: 600;
   transition: background-color 0.3s ease;
-  margin-top: 2rem; /* Margen superior para alinear con el texto */
+  margin-top: 2rem;
 }
 
 .header-button:hover {
@@ -254,8 +254,8 @@ nav {
   border-radius: 12px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
-  position: relative; /* Para el efecto de fondo */
-  overflow: hidden; /* Para que el fondo no sobresalga */
+  position: relative;
+  overflow: hidden;
 }
 
 .benefit-card:hover {
@@ -291,7 +291,6 @@ nav {
   color: var(--text-light);
 }
 
-/* Estilo adicional para la sección */
 #benefits {
   padding: 5rem 0;
 }
@@ -551,7 +550,7 @@ nav {
   flex: 1;
   max-width: 500px;
   border-radius: 10px;
-  /* box-shadow: 0px 0px 10px 0 #0007; */
+  box-shadow: 0px 0px 10px 0 #0007; /* Añadido para profundidad */
 }
 
 .service-content {
@@ -613,6 +612,7 @@ nav {
   .service-image {
     max-width: 100%;
   }
+
   .service-content {
     text-align: center;
   }
@@ -628,6 +628,8 @@ nav {
 }
 
 .treatment-item {
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar elementos en columna */
   background: #ffffff;
   border-radius: 10px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
@@ -642,8 +644,12 @@ nav {
 }
 
 .treatment-info {
-  text-align: center;
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar elementos en columna */
+  justify-content: space-between; /* Espacio entre elementos */
+  flex-grow: 1; /* Permitir que ocupe el espacio restante */
   padding: 1rem;
+  /* text-align: center; */
 }
 
 .treatment-info h3 {
@@ -654,14 +660,15 @@ nav {
 }
 
 .treatment-info p {
-  color: #555;
+  color: var(--text-light);
 }
 
-.price {
+.treatment-info .price {
   font-size: 1.2rem;
-  font-weight: bold;
-  color: var(--primary-color);
+  font-weight: 500;
+  color: var(--text-dark);
   margin: 0.5rem 0;
+  text-align: right;
 }
 
 /*  Botones */
@@ -670,7 +677,7 @@ nav {
   background-color: var(--primary-color);
   color: #ffffff;
   border: none;
-  border-radius: 5px;
+  border-radius: 50px;
   cursor: pointer;
   text-align: center;
   text-decoration: none;
@@ -828,6 +835,7 @@ nav {
 }
 
 .footer__links a {
+  font-size: 0.9rem;
   font-weight: 500;
   color: var(--text-dark);
 }
@@ -877,6 +885,10 @@ nav {
   gap: 1rem;
 }
 
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+
 .footer__socials a {
   display: inline-flex;
   justify-content: center;
@@ -899,9 +911,31 @@ nav {
 .footer__bar {
   padding: 1.5rem;
   font-size: 1rem;
-  color: var(--text-dark);
+  color: var(--white);
   text-align: center;
   background-color: var(--primary-color);
+}
+
+.footer__col h4 {
+  margin-bottom: 1rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--text-dark);
+}
+
+.footer__links {
+  display: grid;
+  gap: 0.5rem; /* Espacio entre los elementos de la lista */
+}
+
+.footer__links li {
+  color: var(--text-dark); /* Color del texto */
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    grid-template-columns: 1fr; /* Una sola columna en móviles */
+  }
 }
 
 /* ----------------------------- MEDIA QUERIES ----------------------------- */
@@ -1142,119 +1176,94 @@ textarea {
   }
 }
 
-/*----------------------------- TESTIMONIOS ---------------------------*/
+/* testimonios -------------------------------------------------------------------------- */
 
-.client__container {
+.testimonios {
   position: relative;
-  isolation: isolate;
-}
-
-.client__card {
-  position: relative;
-  isolation: isolate;
-  margin-top: 4rem;
-  display: none;
-  animation: fadeEffect 1s;
-  margin-bottom: -3rem;
-}
-
-.client__card.active {
-  display: block;
-}
-
-@keyframes fadeEffect {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-.swiper {
-  padding-block: 4rem;
-  width: 100%;
-}
-
-.swiper-slide {
-  min-width: 375px;
-}
-
-.client__card img {
-  max-width: 400px;
-  border-radius: 2rem;
-  box-shadow: 30px -30px 0px rgba(0, 0, 0, 0.1);
-}
-
-.client__content {
-  padding: 2rem;
+  overflow: hidden;
   background-color: var(--white);
-  border-left: 5px solid var(--primary-color);
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.2);
-  transform: translateY(-5rem);
+  padding: 5rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  margin-bottom: 4rem;
 }
 
-.client__content h4 {
-  font-size: 2rem;
-  font-weight: 500;
-  color: var(--text-dark);
-}
-
-.client__content h5 {
-  margin-bottom: 2rem;
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: var(--primary-color);
-}
-
-.client__content p {
-  color: var(--text-dark);
-}
-
-.client__btns {
+.testimonios-carousel {
   display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
+  transition: transform 0.5s ease;
 }
 
-.client__btns .btn {
-  padding: 10px 12px;
-  font-size: 1.5rem;
-  color: var(--primary-color);
-  background-color: var(--white);
-  border: 2px solid var(--primary-color);
-  border-radius: 100%;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
-  cursor: pointer;
+.testimonio-item {
+  min-width: 100%;
+  text-align: center;
+  margin-top: 4rem;
 }
 
-.client__btns .btn:hover {
-  color: var(--white);
+.testimonio-item blockquote {
+  font-size: 1.2rem;
+  font-style: italic;
+  color: var(--text-light);
+  margin: 1rem 5.5rem;
+}
+
+.testimonio-nombre {
+  font-weight: bold;
+  color: var(--text-dark);
+  margin-top: 1.5rem;
+}
+
+.testimonio-rol {
+  font-size: 0.9rem;
+  color: var(--text-light);
+  margin-top: 0.5rem;
+}
+
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
   background-color: var(--primary-color);
+  color: var(--white);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  z-index: 10;
+  transition: 0.3s ease-in-out;
 }
 
-@media (width > 768px) {
-  .client__btns {
-    position: absolute;
-    top: 15rem;
-    right: 1rem;
-    margin-top: 0;
-  }
+.carousel-button.prev {
+  left: 10px;
 }
 
-@media (width > 540px) {
-  .client__content {
-    position: absolute;
-    top: 50%;
-    right: 0;
-    transform: translateY(-50%);
-    margin-left: 2rem;
-    width: 75%;
+.carousel-button.next {
+  right: 10px;
+}
+
+.carousel-button:hover {
+  background-color: var(--secondary-color);
+}
+
+@media (max-width: 768px) {
+  .testimonio-item blockquote {
+    font-size: 1rem;
+    margin: 1rem 1rem;
   }
 
-  .client__btns {
-    margin-top: 2rem;
+  .testimonio-nombre {
+    font-size: 1rem;
+    margin-top: 1rem;
+  }
+
+  .testimonio-rol {
+    font-size: 0.8rem;
+    margin-top: 0.3rem;
+  }
+
+  .carousel-button {
+    width: 35px;
+    height: 35px;
   }
 }
 
@@ -1332,93 +1341,28 @@ textarea {
   }
 }
 
-/* testimonios -------------------------------------------------------------------------- */
-
-.testimonios {
-  position: relative; /* Para posicionar los botones */
-  overflow: hidden; /* Ocultar el contenido que se desborda */
-  background-color: var(--white); /* Fondo blanco para la sección */
-  padding: 5rem 1rem; /* Espaciado interno */
-  border-radius: 8px; /* Bordes redondeados */
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-  margin-bottom: 4rem;
-}
-
-.testimonios-carousel {
-  display: flex; /* Usar flexbox para alinear los testimonios */
-  transition: transform 0.5s ease; /* Transición suave al mover el carrusel */
-}
-
-.testimonio-item {
-  min-width: 100%; /* Cada testimonio ocupa el 100% del contenedor */
+.brands-section {
   text-align: center; /* Centrar el texto */
-  margin-top: 4rem; /* Espacio superior */
+  padding: 1rem; /* Espaciado interno */
+  background-color: var(--white); /* Fondo blanco */
+  margin-bottom: 4rem; /* Espacio inferior */
 }
 
-.testimonio-item blockquote {
-  font-size: 1.2rem; /* Tamaño de fuente del testimonio */
-  font-style: italic; /* Estilo en cursiva */
-  color: var(--text-light); /* Color del texto */
-  margin: 1rem 5.5rem; /* Espacio arriba y abajo */
+.brands-section {
+  margin-bottom: 2rem; /* Espacio debajo del encabezado */
+  color: var(--text-dark); /* Color del encabezado */
 }
 
-.testimonio-nombre {
-  font-weight: bold; /* Nombre en negrita */
-  color: var(--text-dark); /* Color del nombre */
-  margin-top: 1.5rem; /* Espacio superior */
+.brands-logos {
+  display: flex; /* Usar flexbox para alinear los logos */
+  justify-content: center; /* Centrar los logos horizontalmente */
+  flex-wrap: wrap; /* Permitir que los logos se envuelvan en pantallas pequeñas */
+  gap: 5rem; /* Espacio entre los logos */
+  padding: 3rem 0rem;
 }
 
-.testimonio-rol {
-  font-size: 0.9rem; /* Tamaño de fuente del rol */
-  color: var(--text-light); /* Color del rol */
-  margin-top: 0.5rem; /* Espacio superior */
-}
-
-.carousel-button {
-  position: absolute; /* Posicionar los botones sobre el carrusel */
-  top: 50%; /* Centrar verticalmente */
-  transform: translateY(-50%); /* Ajustar la posición */
-  background-color: var(--primary-color); /* Color de fondo de los botones */
-  color: var(--white); /* Color del texto */
-  border: none; /* Sin borde */
-  border-radius: 50%; /* Botones circulares */
-  width: 40px; /* Ancho del botón */
-  height: 40px; /* Alto del botón */
-  cursor: pointer; /* Cambiar el cursor al pasar sobre el botón */
-  z-index: 10; /* Asegurarse de que los botones estén por encima del contenido */
-  transition: 0.3s ease-in-out;
-}
-
-.carousel-button.prev {
-  left: 10px; /* Posición del botón anterior */
-}
-
-.carousel-button.next {
-  right: 10px; /* Posición del botón siguiente */
-}
-
-.carousel-button:hover {
-  background-color: var(--secondary-color);
-}
-
-@media (max-width: 768px) {
-  .testimonio-item blockquote {
-    font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
-    margin: 1rem 1rem; /* Espacio más pequeño en móviles */
-  }
-
-  .testimonio-nombre {
-    font-size: 1rem; /* Tamaño de fuente más pequeño en móviles */
-    margin-top: 1rem; /* Espacio superior */
-  }
-
-  .testimonio-rol {
-    font-size: 0.8rem; /* Tamaño de fuente más pequeño en móviles */
-    margin-top: 0.3rem; /* Espacio superior */
-  }
-
-  .carousel-button {
-    width: 35px; /* Botones más pequeños en móviles */
-    height: 35px; /* Botones más pequeños en móviles */
-  }
+.brand-logo {
+  max-width: 150px; /* Ancho máximo de los logos */
+  height: auto; /* Mantener la proporción de los logos */
+  transition: opacity 0.3s; /* Transición suave para el hover */
 }
