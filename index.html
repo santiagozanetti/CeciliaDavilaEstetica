@@ -78,7 +78,7 @@
     <header class="header" id="home">
       <div class="section__container header__container">
         <h1>
-          Resaltá<br /><span>tu belleza <br />natural.</span>
+          <span> Resaltá<br />tu belleza <br />natural.</span>
         </h1>
         <p>
           Tratamientos faciales y corporales <br />personalizados para adaptarse
@@ -91,7 +91,7 @@
     <!--------------------------------- SERVICIOS O TRATAMIENTOS --------------------------------------------->
 
     <section class="section__container" id="services">
-      <p class="section__subheader">Belleza y relajación en un solo lugar</p>
+      <p class="section__subheader">Belleza y relajación</p>
       <h2 class="section__header">Explorá nuestros tratamientos</h2>
 
       <div class="services-wrapper">
@@ -217,8 +217,8 @@
       <!-- Llamada a la Acción -->
       <div class="cta-container">
         <p class="benefit-text">
-          ¿Lista para transformar tu belleza?
-          <strong>¡Reserva tu consulta gratuita hoy mismo!</strong>
+          ¿Lista para transformar tu piel y cuerpo?
+          <strong>¡Reservá tu consulta gratuita hoy mismo!</strong>
         </p>
         <a href="#contact" class="benefit-button">Reservar Consulta</a>
       </div>
@@ -243,14 +243,14 @@
         <div class="about__content">
           <h4>Te guiamos hacia tu mejor versión</h4>
           <p>
-            Creemos que cada persona merece sentirse bien consigo misma. Por
-            eso, combinamos tecnología de punta con un enfoque humano, para
-            ayudarte a realzar tu belleza natural y tu confianza.
+            En estética Dávila queremos que disfrutes de una experiencia
+            relajante y única, buscando tu bienestar. Es por ello que contamos
+            con alta tecnología para brindarte los resultados que estás
+            buscando.
           </p>
         </div>
       </div>
 
-      <!-- Resto de filas -->
       <div class="about__row">
         <div class="about__image">
           <img
@@ -260,11 +260,12 @@
           />
         </div>
         <div class="about__content">
-          <h4>Un espacio pensado para vos</h4>
+          <h4>Tu lugar de relax</h4>
           <p>
-            Nuestro centro está diseñado para brindarte momentos de tranquilidad
-            y cuidado. Aquí, la belleza y el bienestar se encuentran para que
-            disfrutes de una experiencia única.
+            Nuestro centro está pensado para que te sientas como en casa. La
+            belleza y el bienestar se juntan para que disfrutes de momentos de
+            pura tranquilidad. ¡Vení a desconectar un rato y a disfrutar de una
+            experiencia única que te va a hacer sentir increíble! .
           </p>
         </div>
       </div>
@@ -499,7 +500,11 @@
 
         <div class="contact__content">
           <div class="contact__form">
-            <form id="contactForm" aria-labelledby="contact-header">
+            <form
+              id="contactForm"
+              aria-labelledby="contact-header"
+              onsubmit="sendWhatsApp(event)"
+            >
               <div class="form__group">
                 <label for="name">Nombre</label>
                 <input
@@ -531,13 +536,7 @@
                   aria-required="true"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="submit__btn"
-                onclick="sendWhatsApp()"
-              >
-                Enviar mensaje
-              </button>
+              <button type="submit" class="submit__btn">Enviar mensaje</button>
             </form>
           </div>
 

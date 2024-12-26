@@ -178,8 +178,10 @@ document.addEventListener("DOMContentLoaded", function () {
 //   }
 // });
 
-// formulario de contacto
-function sendWhatsApp() {
+function sendWhatsApp(event) {
+  // Prevenir el envío del formulario
+  event.preventDefault();
+
   const name = document.getElementById("name").value.trim();
   const lastname = document.getElementById("lastname").value.trim();
   const message = document.getElementById("message").value.trim();
@@ -211,21 +213,10 @@ function sendWhatsApp() {
     showConfirmButton: false,
     allowOutsideClick: false,
   }).then(() => {
+    // Redirigir a WhatsApp
     window.open(whatsappUrl, "_blank");
   });
 }
-// Verificar si el dispositivo es móvil
-const isMobile = navigator.userAgent.includes("Mobi");
-// Redirigir o abrir en nueva ventana dependiendo del dispositivo
-setTimeout(() => {
-  if (isMobile) {
-    // En móviles, redirigimos directamente
-    window.location.href = whatsappUrl;
-  } else {
-    // En computadoras, abrimos en una nueva ventana
-    window.open(whatsappUrl, "_blank");
-  }
-}, 2000);
 
 // Boton flotante
 window.addEventListener("scroll", function () {

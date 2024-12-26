@@ -184,13 +184,14 @@ nav {
   font-size: 1.8rem;
   font-family: var(--header-font);
   color: var(--white);
-  text-align: left;
+  /* text-align: left; */
 }
 
 .header__container {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  text-align: left;
 }
 
 .header-button {
@@ -550,7 +551,7 @@ nav {
   flex: 1;
   max-width: 500px;
   border-radius: 10px;
-  box-shadow: 0px 0px 10px 0 #0007; /* Añadido para profundidad */
+  box-shadow: 0px 0px 10px 0 #0007;
 }
 
 .service-content {
@@ -559,10 +560,10 @@ nav {
 }
 
 .service-content h3 {
-  font-size: 2.5rem;
+  font-size: 3.5rem;
   color: var(--text-dark);
   margin-bottom: 1rem;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 .service-content p {
