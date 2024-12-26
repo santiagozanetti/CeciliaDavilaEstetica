@@ -152,31 +152,31 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // testimonios
 
-const next = document.getElementById("next");
-const prev = document.getElementById("prev");
-const clientCards = Array.from(document.querySelectorAll(".client__card"));
+// const next = document.getElementById("next");
+// const prev = document.getElementById("prev");
+// const clientCards = Array.from(document.querySelectorAll(".client__card"));
 
-next.addEventListener("click", (e) => {
-  for (let index = 0; index < clientCards.length; index++) {
-    if (clientCards[index].classList.contains("active")) {
-      const nextIndex = (index + 1) % clientCards.length;
-      clientCards[index].classList.remove("active");
-      clientCards[nextIndex].classList.add("active");
-      break;
-    }
-  }
-});
+// next.addEventListener("click", (e) => {
+//   for (let index = 0; index < clientCards.length; index++) {
+//     if (clientCards[index].classList.contains("active")) {
+//       const nextIndex = (index + 1) % clientCards.length;
+//       clientCards[index].classList.remove("active");
+//       clientCards[nextIndex].classList.add("active");
+//       break;
+//     }
+//   }
+// });
 
-prev.addEventListener("click", (e) => {
-  for (let index = 0; index < clientCards.length; index++) {
-    if (clientCards[index].classList.contains("active")) {
-      const prevIndex = (index ? index : clientCards.length) - 1;
-      clientCards[index].classList.remove("active");
-      clientCards[prevIndex].classList.add("active");
-      break;
-    }
-  }
-});
+// prev.addEventListener("click", (e) => {
+//   for (let index = 0; index < clientCards.length; index++) {
+//     if (clientCards[index].classList.contains("active")) {
+//       const prevIndex = (index ? index : clientCards.length) - 1;
+//       clientCards[index].classList.remove("active");
+//       clientCards[prevIndex].classList.add("active");
+//       break;
+//     }
+//   }
+// });
 
 // formulario de contacto
 function sendWhatsApp() {
@@ -258,3 +258,31 @@ function scrollToContact() {
     contactSection.scrollIntoView({ behavior: "smooth" }); // Desplazamiento suave
   }
 }
+
+//testimonios
+let currentSlide = 0;
+const slides = document.querySelectorAll(".testimonio-item");
+const totalSlides = slides.length;
+const carousel = document.querySelector(".testimonios-carousel");
+let autoSlideInterval;
+
+// Función para mover el carrusel
+function moveSlide(direction) {
+  currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+  carousel.style.transform = `translateX(-${currentSlide * 100}%)`;
+  resetAutoSlide(); // Reiniciar el desplazamiento automático
+}
+
+// Función para iniciar el desplazamiento automático
+function startAutoSlide() {
+  autoSlideInterval = setInterval(() => moveSlide(1), 6000);
+}
+
+// Función para reiniciar el desplazamiento automático
+function resetAutoSlide() {
+  clearInterval(autoSlideInterval);
+  startAutoSlide();
+}
+
+// Iniciar el desplazamiento automático al cargar la página
+document.addEventListener("DOMContentLoaded", startAutoSlide);
