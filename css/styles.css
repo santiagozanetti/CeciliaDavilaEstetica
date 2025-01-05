@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 :root {
   --primary-color: #c6a57a;
@@ -56,7 +56,8 @@ body {
 }
 
 body {
-  font-family: "Montserrat", serif;
+  font-family: "Lexend", serif;
+  font-weight: 300;
 }
 
 /* ------------------------------- MENÚ ---------------------------------------  */
@@ -390,17 +391,17 @@ nav {
   max-width: 40px;
 }
 
-.about__row:nth-child(odd) {
+/* .about__row:nth-child(odd) {
   background-color: #e8f7fe;
   padding: 2rem;
   border-radius: 12px;
-}
+} */
 
-.about__row:nth-child(even) {
+/* .about__row:nth-child(even) {
   background-color: #fbebf1;
   padding: 2rem;
   border-radius: 12px;
-}
+} */
 
 /* Media Queries */
 @media (max-width: 768px) {
@@ -445,7 +446,7 @@ nav {
 }
 
 .product-section {
-  background-color: var(--primary-color);
+  background-color: #ffe5b4;
   padding: 3rem 10rem;
 }
 
@@ -475,9 +476,9 @@ nav {
   font-size: 1.5rem;
   color: var(--text-dark);
   margin-bottom: 0.5rem;
-  font-weight: 600;
+  font-weight: 500;
   text-align: center;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
 }
 
 .product-description {
