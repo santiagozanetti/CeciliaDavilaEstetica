@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
 
 :root {
-  --primary-color: #c6a57a;
+  --primary-color: #cba580;
   --secondary-color: #ecbc94;
   --text-dark: #3f3b57;
   --text-light: #908ca3;
@@ -261,24 +261,17 @@ nav {
 }
 
 .benefit-card:hover {
-  transform: translateY(-5px);
   box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15);
 }
 
 .benefit-icon {
   font-size: 3.5rem;
-  color: var(--white);
-  background: var(--primary-color);
+  color: var(--primary-color);
   border-radius: 50%;
   padding: 1rem;
   margin-bottom: 1rem;
   display: inline-block;
   transition: background 0.3s ease;
-}
-
-.benefit-card:hover .benefit-icon {
-  background: var(--primary-color);
-  color: var(--white);
 }
 
 .benefit-card h3 {
@@ -293,9 +286,9 @@ nav {
   color: var(--text-light);
 }
 
-#benefits {
+/* #benefits {
   padding: 5rem 0;
-}
+} */
 
 .cta-container {
   text-align: center;
@@ -318,7 +311,7 @@ nav {
   color: var(--white);
   background-color: transparent;
   border: 2px solid white;
-  border-radius: 8px;
+  border-radius: 50px;
   transition: background-color 0.3s;
 }
 
@@ -512,6 +505,9 @@ nav {
   .product-price {
     font-size: 1rem;
   }
+  .product h2 {
+    font-size: 0.5rem;
+  }
 }
 
 @media (max-width: 480px) {
@@ -525,6 +521,9 @@ nav {
 
   .product-price {
     font-size: 0.9rem;
+  }
+  .section__header .product h2 {
+    font-size: 1rem;
   }
 }
 
@@ -678,7 +677,7 @@ nav {
   padding: 1rem 2rem;
   background-color: var(--primary-color);
   color: #ffffff;
-  border: none;
+  border: 2px solid white;
   border-radius: 50px;
   cursor: pointer;
   text-align: center;
@@ -691,16 +690,23 @@ nav {
   background-color: var(--secondary-color);
 }
 
+.reserve:hover {
+  background-color: var(--white);
+  color: var(--primary-color);
+}
+
 .cta-section {
   text-align: center;
   margin: 10rem 0;
-  color: var(--text-light);
+  color: var(--white);
+  background-color: var(--primary-color);
+  padding: 3rem 8rem;
+  border-radius: 50px;
 }
 
 .cta-section h2 {
   font-size: 2rem;
   margin-bottom: 1rem;
-  color: var(--primary-color);
 }
 
 .cta-section p {
@@ -1070,7 +1076,7 @@ nav {
 /*----------------------------- CONTACTO ---------------------------*/
 
 .contact__section {
-  background: #e6e6facf; /* Lavanda suave */
+  background: #dec79b;
 }
 
 .contact__content {
@@ -1345,7 +1351,7 @@ textarea {
 
 .brands-section {
   text-align: center; /* Centrar el texto */
-  padding: 1rem; /* Espaciado interno */
+  padding: 3rem; /* Espaciado interno */
   background-color: var(--white); /* Fondo blanco */
   margin-bottom: 4rem; /* Espacio inferior */
 }
