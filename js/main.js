@@ -204,7 +204,7 @@ function sendWhatsApp(event) {
   )}`;
 
   // Redirigir a WhatsApp
-  window.open(whatsappUrl, "_blank");
+  window.location.href = whatsappUrl;
 
   // Mostrar alerta de éxito
   Swal.fire({
