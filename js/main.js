@@ -199,7 +199,7 @@ function sendWhatsApp(event) {
   // Configurar el mensaje
   const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
-  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+  const whatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(
     whatsappMessage
   )}`;
 
