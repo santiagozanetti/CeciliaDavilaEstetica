@@ -199,12 +199,23 @@ function sendWhatsApp(event) {
   // Configurar el mensaje
   const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
-  const whatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(
-    whatsappMessage
-  )}`;
 
-  // Redirigir a WhatsApp
-  window.location.href = whatsappUrl;
+  // Utilizar deep linking para abrir la aplicación de WhatsApp
+  const isMobile =
+    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+      navigator.userAgent
+    );
+  if (isMobile) {
+    const whatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+    window.location.href = whatsappUrl;
+  } else {
+    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+      whatsappMessage
+    )}`;
+    window.open(whatsappUrl, "_blank");
+  }
 
   // Mostrar alerta de éxito
   Swal.fire({
