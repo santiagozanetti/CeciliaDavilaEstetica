@@ -179,14 +179,12 @@ document.addEventListener("DOMContentLoaded", function () {
 // });
 
 function sendWhatsApp(event) {
-  // Prevenir el envío del formulario
   event.preventDefault();
 
   const name = document.getElementById("name").value.trim();
   const lastname = document.getElementById("lastname").value.trim();
   const message = document.getElementById("message").value.trim();
 
-  // Verificar si los campos están vacíos
   if (name === "" || lastname === "" || message === "") {
     Swal.fire({
       icon: "warning",
@@ -196,28 +194,14 @@ function sendWhatsApp(event) {
     return;
   }
 
-  // Configurar el mensaje
   const whatsappNumber = "5491150377127";
   const whatsappMessage = `Hola, soy ${name} ${lastname}. ${message}`;
+  const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
+    whatsappMessage
+  )}`;
 
-  // Utilizar deep linking para abrir la aplicación de WhatsApp
-  const isMobile =
-    /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-      navigator.userAgent
-    );
-  if (isMobile) {
-    const whatsappUrl = `whatsapp://send?phone=${whatsappNumber}&text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-    window.location.href = whatsappUrl;
-  } else {
-    const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(
-      whatsappMessage
-    )}`;
-    window.open(whatsappUrl, "_blank");
-  }
+  window.open(whatsappUrl, "_blank");
 
-  // Mostrar alerta de éxito
   Swal.fire({
     icon: "success",
     title: "¡Mensaje listo!",
@@ -277,7 +261,15 @@ function moveSlide(direction) {
 
 // Función para iniciar el desplazamiento automático
 function startAutoSlide() {
-  autoSlideInterval = setInterval(() => moveSlide(1), 6000);
+  let timestamp = 0;
+  function animate(timestamp) {
+    if (timestamp - timestamp > 6000) {
+      moveSlide(1);
+      timestamp = timestamp;
+    }
+    requestAnimationFrame(animate);
+  }
+  requestAnimationFrame(animate);
 }
 
 // Función para reiniciar el desplazamiento automático
@@ -288,3 +280,46 @@ function resetAutoSlide() {
 
 // Iniciar el desplazamiento automático al cargar la página
 document.addEventListener("DOMContentLoaded", startAutoSlide);
+
+// Función para cargar imágenes de manera eficiente
+function loadImages() {
+  const images = document.querySelectorAll("img");
+
+  images.forEach((image) => {
+    const src = image.getAttribute("src");
+    const lazySrc = image.getAttribute("data-lazy-src");
+
+    if (lazySrc) {
+      image.src = lazySrc;
+      image.removeAttribute("data-lazy-src");
+    } else {
+      image.src = src;
+    }
+  });
+}
+
+// Función para cargar imágenes cuando se hace scroll
+function loadImagesOnScroll() {
+  const images = document.querySelectorAll("img");
+
+  images.forEach((image) => {
+    const src = image.getAttribute("src");
+    const lazySrc = image.getAttribute("data-lazy-src");
+
+    if (lazySrc) {
+      const rect = image.getBoundingClientRect();
+      const viewportHeight = window.innerHeight;
+
+      if (rect.top < viewportHeight) {
+        image.src = lazySrc;
+        image.removeAttribute("data-lazy-src");
+      }
+    }
+  });
+}
+
+// Llamar a la función para cargar imágenes cuando se carga la página
+document.addEventListener("DOMContentLoaded", loadImages);
+
+// Llamar a la función para cargar imágenes cuando se hace scroll
+window.addEventListener("scroll", loadImagesOnScroll);
