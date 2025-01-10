@@ -1,5 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap&font-display=swap");
 :root {
   --primary-color: #cba580;
   --secondary-color: #ecbc94;
@@ -695,6 +694,13 @@ nav {
   color: var(--primary-color);
 }
 
+.old-price {
+  text-decoration: line-through;
+  color: #666;
+  font-size: 1.1rem;
+  margin-right: 0.5rem;
+}
+
 .cta-section {
   text-align: center;
   margin: 10rem 0;
@@ -712,6 +718,36 @@ nav {
 .cta-section p {
   font-size: 1.2rem;
   margin-bottom: 1rem;
+}
+
+/* Media queries para dispositivos móviles */
+
+@media (max-width: 768px) {
+  .cta-section {
+    padding: 2rem 2rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.5rem;
+  }
+
+  .cta-section p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cta-section {
+    padding: 1.5rem 1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 1.2rem;
+  }
+
+  .cta-section p {
+    font-size: 0.9rem;
+  }
 }
 
 /* Responsividad */
