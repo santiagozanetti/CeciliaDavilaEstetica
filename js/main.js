@@ -203,6 +203,9 @@ function sendWhatsApp(event) {
     whatsappMessage
   )}`;
 
+  // Redirigir a WhatsApp
+  window.open(whatsappUrl, "_blank");
+
   // Mostrar alerta de éxito
   Swal.fire({
     icon: "success",
@@ -212,9 +215,6 @@ function sendWhatsApp(event) {
     timerProgressBar: true,
     showConfirmButton: false,
     allowOutsideClick: false,
-  }).then(() => {
-    // Redirigir a WhatsApp
-    window.open(whatsappUrl, "_blank");
   });
 }
 
