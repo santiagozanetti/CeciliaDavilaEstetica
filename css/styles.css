@@ -63,6 +63,7 @@ body {
 body {
   font-family: "Lexend", serif;
   font-weight: 300;
+  overflow-x: hidden;
 }
 
 /* ------------------------------- MENÚ ---------------------------------------  */
