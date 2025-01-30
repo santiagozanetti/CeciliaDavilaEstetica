@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Santiago Zanetti" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" href="./assets/icono-pluma.webp" />
+    <link rel="icon" href="./assets/ceciliadavilalogo.webp" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -42,7 +42,7 @@
         <div class="nav__logo">
           <a href="#">
             <img
-              src="assets/icono-pluma.webp"
+              src="assets/ceciliadavilalogo.webp"
               alt="Icono pluma"
               class="logo-icon"
               loading="lazy"
@@ -79,7 +79,7 @@
       <div class="treatment-grid">
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/limpiezacutis.png"
+            src="./assets/limpiezacutisdefinitiva.png"
             alt="Limpieza de Cutis"
             class="treatment-image"
             loading="lazy"
@@ -92,8 +92,8 @@
               poros y deja la piel más luminosa y suave.
             </p>
             <p class="price">
-              <span class="old-price">$28.000</span>
-              $23.000
+              <span class="old-price">$27.990</span>
+              $22.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -103,7 +103,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/cosmetologist-applying-mask-face-client-beauty-salon.jpg"
+            src="./assets/peelingdefinitiva.png"
             alt="Peeling Facial"
             class="treatment-image"
             loading="lazy"
@@ -117,8 +117,8 @@
               realizar todo el año .
             </p>
             <p class="price">
-              <span class="old-price">$32.000</span>
-              $27.000
+              <span class="old-price">$31.990</span>
+              $26.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -128,7 +128,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/dermapen.png"
+            src="./assets/dermapendef.png"
             alt="Dermapen"
             class="treatment-image"
             loading="lazy"
@@ -142,8 +142,8 @@
               absorción de productos, maximizando su efectividad.
             </p>
             <p class="price">
-              <span class="old-price">$38.000</span>
-              $30.000
+              <span class="old-price">$37.990</span>
+              $29.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -153,7 +153,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/demaplaning.png"
+            src="./assets/hilostensoresdef.png"
             alt="Dermaplanning"
             class="treatment-image"
             loading="lazy"
@@ -165,8 +165,8 @@
               tensores/parches. Rellena y afirman la piel.
             </p>
             <p class="price">
-              <span class="old-price">$42.000</span>
-              $36.000
+              <span class="old-price">$41.990</span>
+              $35.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -176,7 +176,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/yogafacial.png"
+            src="./assets/yogafacialdef.png"
             alt="Yoga Facial"
             class="treatment-image"
             loading="lazy"
@@ -190,8 +190,8 @@
               la luminosidad y firmeza del rostro.
             </p>
             <p class="price">
-              <span class="old-price">$38.000</span>
-              $30.000
+              <span class="old-price">$37.990</span>
+              $29.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -201,7 +201,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/INSTAGRAM (Sitio web).png"
+            src="./assets/crioradiofed.png"
             alt="Crio Radiofrecuencia"
             class="treatment-image"
             loading="lazy"
@@ -213,8 +213,8 @@
               tensar la piel y reducir arrugas.
             </p>
             <p class="price">
-              <span class="old-price">$35.000</span>
-              $28.000
+              <span class="old-price">$34.990</span>
+              $27.990
             </p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
@@ -244,7 +244,11 @@
 
         <div class="contact__content">
           <div class="contact__form">
-            <form id="contactForm" aria-labelledby="contact-header">
+            <form
+              id="contactForm"
+              aria-labelledby="contact-header"
+              onsubmit="sendWhatsApp(event)"
+            >
               <div class="form__group">
                 <label for="name">Nombre</label>
                 <input
@@ -276,13 +280,7 @@
                   aria-required="true"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="submit__btn"
-                onclick="sendWhatsApp()"
-              >
-                Enviar mensaje
-              </button>
+              <button type="submit" class="submit__btn">Enviar mensaje</button>
             </form>
           </div>
 
@@ -312,7 +310,7 @@
           <ul class="footer__links">
             <li><a href="index.html#home">Inicio</a></li>
             <li><a href="index.html#about">Sobre Nosotros</a></li>
-            <li><a href="index.html#service">Servicios</a></li>
+            <li><a href="index.html#services">Tratamientos</a></li>
             <li><a href="index.html#store">Productos</a></li>
             <li><a href="index.html#faqs">Faq</a></li>
             <li><a href="index.html#contact">Contacto</a></li>

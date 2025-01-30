@@ -16,7 +16,7 @@
     />
     <meta name="author" content="Santiago Zanetti" />
     <meta name="robots" content="index, follow" />
-    <link rel="icon" href="./assets/icono-pluma.webp" />
+    <link rel="icon" href="./assets/ceciliadavilalogo.webp" />
     <link
       href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css"
       rel="stylesheet"
@@ -42,7 +42,7 @@
         <div class="nav__logo">
           <a href="#">
             <img
-              src="assets/icono-pluma.webp"
+              src="assets/ceciliadavilalogo.webp"
               alt="Icono pluma"
               class="logo-icon"
               loading="lazy"
@@ -79,7 +79,7 @@
       <div class="treatment-grid">
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/himfu.png"
+            src="./assets/himfudef.png"
             alt="Himfu tratamiento corporal"
             class="treatment-image"
             loading="lazy"
@@ -92,7 +92,8 @@
               colágeno y mejora la circulación. Ideal para recuperarte después
               de una cirugía, ayudando a drenar líquidos y suavizar durezas.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
+
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -101,7 +102,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/termoterapia.png"
+            src="./assets/termoterapidef.png"
             alt="Dermapen"
             class="treatment-image"
             loading="lazy"
@@ -114,7 +115,7 @@
               modelación del contorno corporal. Ayuda también a relajar
               tensiones.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -123,7 +124,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/criofrec.png"
+            src="./assets/criofrecdef.png"
             alt="Peeling Facial"
             class="treatment-image"
             loading="lazy"
@@ -136,7 +137,7 @@
               adiposidad localizada y mejorar el aspecto de la piel con
               celulitis.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -145,7 +146,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/bodyup1.png"
+            src="./assets/bodyupdef.png"
             alt="Dermaplaning"
             class="treatment-image"
             loading="lazy"
@@ -157,7 +158,7 @@
               celulitis, logrando una piel más tonificada y un contorno más
               definido.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -166,7 +167,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/ultracavitacion.png"
+            src="./assets/ultracavidef.png"
             alt="Yoga Facial"
             class="treatment-image"
             loading="lazy"
@@ -177,7 +178,8 @@
               Usa ultrasonido para romper células de grasa, tonificando el
               cuerpo y mejorando la circulación para un contorno más definido.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
+
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -186,7 +188,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/masaje.png"
+            src="./assets/masajesreductoresdef.png"
             alt="Drenaje Linfático"
             class="treatment-image"
             loading="lazy"
@@ -199,7 +201,7 @@
               caderas. Mejoran la circulación, eliminan líquidos retenidos,
               tonifican músculos y alivian la tensión.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -208,7 +210,7 @@
 
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/vendas.png"
+            src="./assets/vendasfriasdef.png"
             alt="Crio Radiofrecuencia"
             class="treatment-image"
             loading="lazy"
@@ -219,7 +221,7 @@
               Tratamiento que mejora la microcirculación y reduce la retención
               de líquidos, ayudando a reafirmar la piel y combatir la celulitis.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -227,7 +229,7 @@
         </div>
         <div class="treatment-item">
           <img
-            src="./assets/assetscompessed/drenajecorporal.png"
+            src="./assets/dreanajedef.png"
             alt="Crio Radiofrecuencia"
             class="treatment-image"
             loading="lazy"
@@ -241,7 +243,7 @@
               mejora la apariencia de la celulitis y varices. Es aconsejable en
               embarazas y post cirugías.
             </p>
-            <p class="price">$23.000</p>
+            <p class="price">$22.999</p>
             <button class="cta-button" onclick="scrollToContact()">
               Reservar Ahora
             </button>
@@ -270,7 +272,11 @@
 
         <div class="contact__content">
           <div class="contact__form">
-            <form id="contactForm" aria-labelledby="contact-header">
+            <form
+              id="contactForm"
+              aria-labelledby="contact-header"
+              onsubmit="sendWhatsApp(event)"
+            >
               <div class="form__group">
                 <label for="name">Nombre</label>
                 <input
@@ -302,13 +308,7 @@
                   aria-required="true"
                 ></textarea>
               </div>
-              <button
-                type="submit"
-                class="submit__btn"
-                onclick="sendWhatsApp()"
-              >
-                Enviar mensaje
-              </button>
+              <button type="submit" class="submit__btn">Enviar mensaje</button>
             </form>
           </div>
 
@@ -338,7 +338,7 @@
           <ul class="footer__links">
             <li><a href="index.html#home">Inicio</a></li>
             <li><a href="index.html#about">Sobre Nosotros</a></li>
-            <li><a href="index.html#service">Servicios</a></li>
+            <li><a href="index.html#services">Tratamientos</a></li>
             <li><a href="index.html#store">Productos</a></li>
             <li><a href="index.html#faqs">Faq</a></li>
             <li><a href="index.html#contact">Contacto</a></li>
