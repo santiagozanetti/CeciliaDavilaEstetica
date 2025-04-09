@@ -635,6 +635,7 @@ nav {
 }
 
 .treatment-item {
+  position: relative;
   display: flex; /* Usar flexbox */
   flex-direction: column; /* Colocar elementos en columna */
   background: #ffffff;
@@ -662,7 +663,7 @@ nav {
 
 .price-single {
   font-weight: 600;
-  color: #222; 
+  color: #222;
 }
 
 @media screen and (max-width: 768px) {
@@ -853,13 +854,14 @@ nav {
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #f9a972;
-  color: #fff;
-  font-size: 0.75rem;
-  font-weight: bold;
-  padding: 5px 10px;
-  border-radius: 12px;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #ff416c, #ff4b2b);
+  color: white;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 6px 12px;
+  border-radius: 30px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  letter-spacing: 0.5px;
   z-index: 1;
 }
 
