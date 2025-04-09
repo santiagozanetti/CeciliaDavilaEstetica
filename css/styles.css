@@ -652,6 +652,32 @@ nav {
   border-top-left-radius: 10px;
 }
 
+.price {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: var(--text-dark);
+  margin: 0.8rem 0;
+  line-height: 1.6;
+}
+
+.price-single {
+  font-weight: 600;
+  color: #222; 
+}
+
+@media screen and (max-width: 768px) {
+  .price {
+    text-align: center;
+    font-size: 1rem;
+  }
+
+  .price-single,
+  .price-double {
+    display: inline-block;
+    font-size: 1.05rem;
+  }
+}
+
 @media (max-width: 768px) {
   .treatment-image {
     height: 230px;
@@ -791,7 +817,7 @@ nav {
 
 .cta-section {
   text-align: center;
-  margin: 10rem 0;
+  margin: 8rem 1rem 5rem 1rem;
   color: var(--white);
   background-color: var(--primary-color);
   padding: 3rem 8rem;
