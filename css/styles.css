@@ -178,7 +178,7 @@ nav {
   color: var(--primary-color);
   line-height: 6rem;
   text-align: left;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.4);
 }
 
 .header__container h1 span {
@@ -881,11 +881,6 @@ nav {
 }
 
 @media screen and (max-width: 768px) {
-  .price {
-    font-size: 1rem;
-    font-weight: 600;
-  }
-
   .price .old-price {
     font-size: 0.85rem;
     font-weight: 400;
@@ -1658,27 +1653,27 @@ textarea {
 }
 
 .brands-section {
-  text-align: center; /* Centrar el texto */
-  padding: 3rem; /* Espaciado interno */
-  background-color: var(--white); /* Fondo blanco */
-  margin-bottom: 4rem; /* Espacio inferior */
+  text-align: center;
+  padding: 3rem;
+  background-color: var(--white);
+  margin-bottom: 4rem;
 }
 
 .brands-section {
-  margin-bottom: 2rem; /* Espacio debajo del encabezado */
-  color: var(--text-dark); /* Color del encabezado */
+  margin-bottom: 2rem;
+  color: var(--text-dark);
 }
 
 .brands-logos {
-  display: flex; /* Usar flexbox para alinear los logos */
-  justify-content: center; /* Centrar los logos horizontalmente */
-  flex-wrap: wrap; /* Permitir que los logos se envuelvan en pantallas pequeñas */
-  gap: 5rem; /* Espacio entre los logos */
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 5rem;
   padding: 3rem 0rem;
 }
 
 .brand-logo {
-  max-width: 150px; /* Ancho máximo de los logos */
-  height: auto; /* Mantener la proporción de los logos */
-  transition: opacity 0.3s; /* Transición suave para el hover */
+  max-width: 150px;
+  height: auto;
+  transition: opacity 0.3s;
 }
