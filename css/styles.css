@@ -29,7 +29,7 @@
 .section__subheader {
   font-size: 1.2rem;
   font-weight: 500;
-  color: var(--text-light);
+  color: #6b6b6b;
   text-align: center;
 }
 
@@ -643,6 +643,8 @@ nav {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   width: 360px; /* Ancho fijo para las tarjetas */
   margin-top: 3rem;
+  transition: all 0.3s ease;
+  border: 1px solid transparent;
 }
 
 .treatment-image {
@@ -1841,10 +1843,10 @@ textarea {
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.service-item:hover {
+/* .service-item:hover {
   transform: translateY(-5px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
-}
+} */
 
 /* Efecto de hover para imágenes */
 .about__image {
@@ -1944,4 +1946,100 @@ textarea {
 .product-card:hover {
   transform: translateY(-8px);
   box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* ===== SERVICIOS ===== */
+.services {
+  padding: var(--spacing-4xl) 0;
+  background: var(--white);
+}
+
+.services__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: var(--spacing-3xl);
+}
+
+.service-card {
+  background: var(--white);
+  border-radius: var(--radius-2xl);
+  overflow: hidden;
+  box-shadow: var(--shadow-lg);
+  transition: all var(--transition-base);
+  position: relative;
+}
+
+.service-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-xl);
+}
+
+.service-card__image {
+  position: relative;
+  height: 300px;
+  overflow: hidden;
+}
+
+.service-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-slow);
+}
+
+.service-card:hover .service-card__image img {
+  transform: scale(1.05);
+}
+
+.service-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity var(--transition-base);
+}
+
+.service-card:hover .service-card__overlay {
+  opacity: 1;
+}
+
+.service-card__content {
+  padding: var(--spacing-2xl);
+}
+
+.service-card__title {
+  font-family: var(--font-secondary);
+  font-size: var(--fs-2xl);
+  font-weight: 600;
+  color: var(--gray-900);
+  margin-bottom: var(--spacing-md);
+}
+
+.service-card__description {
+  color: var(--gray-600);
+  line-height: 1.7;
+  margin-bottom: var(--spacing-lg);
+}
+
+.service-card__features {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xs);
+}
+
+.feature-tag {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background: rgba(212, 165, 116, 0.1);
+  color: var(--primary-color);
+  border-radius: var(--radius-full);
+  font-size: var(--fs-xs);
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
 }
